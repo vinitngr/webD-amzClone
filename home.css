@@ -142,9 +142,15 @@ body {
 
 .product-detail {
     background-color: #FFFFFF;
-    height: 135px;
-    border-radius: 0 0 10px 10px;
-    padding: 20px 15px;
+    
+    border-radius: 0 0 10px 20px;
+    padding: 10px 15px;
+    border-top: 1px solid rgb(218, 212, 212);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+   
 }
 
 .product-image {
@@ -157,7 +163,7 @@ body {
 }
 
 .project-shell {
-    height: 408px;
+    
     min-width: 261px;
     max-width: 450px;
     flex-grow: 1;
@@ -176,3 +182,58 @@ Combining these three values (1 1 261px) provides a balance between flexibility 
 Flexibility: The flex-grow: 1 allows the item to expand when there's extra space in the container.
 Initial Size: The flex-basis: 261px ensures a default width of 261px before considering growth or shrinkage.
 Proportional Shrinkage: The flex-shrink: 1 allows the item to shrink when needed but in proportion to other items with the same shrink value.*/
+.product-name{
+    font-size: 20px;
+    color: rgb(53, 52, 52);
+    font-weight:400;
+    min-height: 48px;
+   
+    /* white-space: nowrap;   Keep the text on a single line  */
+    overflow: hidden;      /* Hide overflowed text */
+    text-overflow: ellipsis; /*will show ... instead of just hiding it*/ 
+    display: -webkit-box;     /* Use WebKit box layout model */
+    -webkit-box-orient: vertical;  /* Orient content vertically */
+    -webkit-line-clamp: 2; 
+}
+.product-rating-stars img{
+    height: 25px;
+}
+.product-rating{
+    display: flex;
+}
+.product-rating-counts{
+    align-self:center ;
+    margin-left: 15px;
+    font-size: 20px;
+    color: rgb(76, 76, 76);
+}
+.product-price{
+    font-size: 30px;
+    color: rgb(76, 76, 76);
+    font-weight:bolder;
+}
+.product-addtocart{
+    background-color: rgb(255, 225, 0);
+    width: 70%;
+    padding: 8px;
+    border-radius: 60px;
+    text-align: center;
+    border: none;
+    
+}
+.product-add-quantity{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.quantity{
+    font-weight: bolder;
+    border: 2px solid rgb(213, 213, 213);
+    height: 40px;
+    border-radius: 12px;
+    background-color: rgb(228, 228, 228);
+    width: 15%;
+    padding-left: 5px;
+    
+
+}
