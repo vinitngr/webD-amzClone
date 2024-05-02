@@ -1,39 +1,8 @@
-const products = [
-    {
-        imageUrl: './products/cream.jpg',
-        name: "Red-hoodie 100% Cotton Bath Towels - 2 Pack, Light Teal",
-        rating: {
-            stars: 4.5,
-            counts: 45
-        },
-        price: 599
-    }
-
-    , {
-        imageUrl: './products/71NeU7k0eRL._AC_SY290_.jpg',
-        name: "Men's Marvel T-shirt",
-        rating: {
-            stars: 4,
-            counts: 456
-        },
-        price: 499
-    },
-    {
-        imageUrl: './products/women-chiffon-beachwear-coverup-black.jpg',
-        name: "Women's Chiffon Beachwear Cover Up - Black",
-        rating: {
-            stars: 3.5,
-            counts: 235
-        },
-        price: 249
-    }
-
-]
 
 
 let HTMLcontent = '';
 products.forEach((product) => {
-    HTMLcontent = HTMLcontent +  `<div class="project-shell">
+    HTMLcontent = HTMLcontent + `<div class="project-shell">
         <div class="product-image" style="background-image: url(${product.imageUrl});"></div>
         <div class="product-detail">
             <div class="product-name">${product.name}</div>
@@ -44,7 +13,7 @@ products.forEach((product) => {
             </div>
 
             <div class="product-add-quantity">
-                <button class="product-addtocart">Add to Cart</button>
+                <button class="product-addtocart" data-product-id="${product.id}">Add to Cart</button>
                 <select class="quantity">
                     <option>1</option>
                     <option>2</option>
@@ -53,8 +22,36 @@ products.forEach((product) => {
             </div>
         </div>
     </div>`;
-  
+
 
 });
 //   console.log(content)
-document.querySelector('.products-container').innerHTML=HTMLcontent;
+document.querySelector('.products-container').innerHTML = HTMLcontent;
+
+
+
+
+let cartQuantity=0;
+document.querySelectorAll('.product-addtocart')
+    .forEach((addButton) => {
+        addButton.addEventListener('click', ()=>{
+            cartQuantity++;
+            document.getElementById('cart-box').innerHTML=cartQuantity;
+            const productId=addButton.dataset.productId;
+            let matchingItem;
+            cart.forEach((item)=>{
+                if(productId=== item.productId){
+                    matchingItem= item;
+                }
+            });
+            if(matchingItem){
+                matchingItem.quantity++  ;
+            }
+            else{
+            cart.push({
+                productId:productId,
+                quantity:1
+            });  }
+            // console.log(cart)
+        })
+    })
