@@ -1,6 +1,6 @@
 const products = [
     {   id: "aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f",
-        imageUrl: './products/cream.jpg',
+        imageUrl: './products/men-cozy-fleece-zip-up-hoodie-red.jpg',
         name: "Red-hoodie 100% Cotton Bath Towels - 2 Pack, Light Teal",
         rating: {
             stars: 4.5,
@@ -73,8 +73,8 @@ const products = [
         price: 389
     },
     {
-        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/71eWZpgtFiL._AC_SY290_.jpg',
-        name: "Casual T-Shirt Set of 3",
+        imageUrl: 'https://m.media-amazon.com/images/I/4160gLMnfGL._SX300_SY300_QL70_FMwebp_.jpg',
+        name: "SKYCELL Games Pubg Gaming Triggers for Mobile Button Trigger Works with BGMI, CODM & Other Shooting Games (1 Pair Gaming Button)",
         rating: {
             stars: 4.5,
             counts: 89
@@ -82,8 +82,8 @@ const products = [
         price: 699
     },
     {
-        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/61bKHmA2BkL._AC_UL1500_.jpg',
-        name: "Men's Regular Fit Jeans",
+        imageUrl: 'https://assets.ajio.com/medias/sys_master/root/20230823/3J74/64e636a5afa4cf41f572f9ca/-473Wx593H-466488154-blue-MODEL.jpg',
+        name: "Denim-Men's Regular Fit Jeans",
         rating: {
             stars: 4,
             counts: 120
@@ -91,8 +91,8 @@ const products = [
         price: 1499
     },
     {
-        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/81XH6TCeeDL._AC_SY290_.jpg',
-        name: "Wireless Bluetooth Headphones",
+        imageUrl: 'https://m.media-amazon.com/images/I/31QB73-5IEL._SX300_SY300_QL70_FMwebp_.jpg',
+        name: "Sony-Wireless Bluetooth Headphones",
         rating: {
             stars: 4.5,
             counts: 320
@@ -100,8 +100,8 @@ const products = [
         price: 2499
     },
     {
-        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/61jLFZRLL9L._AC_SY290_.jpg',
-        name: "Smartphone with 128GB Storage",
+        imageUrl: 'https://m.media-amazon.com/images/I/41fCDR6pjpL._SX300_SY300_QL70_FMwebp_.jpg',
+        name: "Galaxy s-20 Ultra -Smartphone with 128GB Storage",
         rating: {
             stars: 4,
             counts: 215
@@ -109,7 +109,7 @@ const products = [
         price: 19999
     },
     {
-        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/71XJh1d8ClL._AC_SY290_.jpg',
+        imageUrl: 'https://contents.mediadecathlon.com/p2155606/d0d1270f3193ae010861df2822d17a07/p2155606.jpg?format=auto&quality=70&f=650x0',
         name: "Women's Athletic Running Shoes",
         rating: {
             stars: 4.5,
@@ -118,7 +118,7 @@ const products = [
         price: 2999
     },
     {
-        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/61j5UBtRDzL._AC_SY290_.jpg',
+        imageUrl: 'https://m.media-amazon.com/images/I/61fjq9eujBL._SL1500_.jpg',
         name: "Gaming Mouse with RGB Lighting",
         rating: {
             stars: 4.5,
@@ -127,16 +127,16 @@ const products = [
         price: 1499
     },
     {
-        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/71pLtxDOalL._AC_SY290_.jpg',
+        imageUrl: 'https://m.media-amazon.com/images/I/41X+sOw6HVL._SY300_SX300_.jpg',
         name: "Instant Coffee Maker",
         rating: {
             stars: 4,
             counts: 250
         },
-        price: 3499
+        price: 18499
     },
     {
-        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/61cJJLn%2BwGL._AC_SY290_.jpg',
+        imageUrl: 'https://m.media-amazon.com/images/I/8191db+HfLL._SL1500_.jpg',
         name: "Bluetooth Portable Speaker",
         rating: {
             stars: 4,
@@ -145,8 +145,8 @@ const products = [
         price: 1999
     },
     {
-        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/61n-9zY4-RL._AC_SY290_.jpg',
-        name: "32-inch Smart TV",
+        imageUrl: 'https://s3.ap-south-1.amazonaws.com/brandbuddiez.com//71/img/product/73/1226/1.webp',
+        name: "Haier-32-inch Smart TV",
         rating: {
             stars: 4,
             counts: 200
@@ -154,7 +154,7 @@ const products = [
         price: 10999
     },
     {
-        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/71R7WF1Q0fL._AC_SY290_.jpg',
+        imageUrl: 'https://m.media-amazon.com/images/I/41zd-yE0QZL._SX300_SY300_QL70_FMwebp_.jpg',
         name: "Stainless Steel Kitchen Knife Set",
         rating: {
             stars: 4.5,
@@ -163,13 +163,13 @@ const products = [
         price: 2299
     },
     {
-        imageUrl: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723d',
-        name: "Casual T-Shirt Set of 3",
+        imageUrl: 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQKeGCv6YX6DbdWX4B54qEoHBh8CWj3QbhG-OGFUqk5jV6_0PfaoHZdNIPNWA12vjO8jlCeRYyQoaWlcJsqWMzzrV77UAnvgTGaDFuT9kYH4QYsJ3GW3Pde',
+        name: "Sony PlayStation 5 PS5 Console",
         rating: {
-            stars: 4.5,
-            counts: 89
+            stars: 4,
+            counts: 5821
         },
-        price: 699
+        price: 45599
     }
 ]
 
