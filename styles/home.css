@@ -15,9 +15,11 @@ body {
     width: 100%;
     height: 70px;
     display: flex;
+    /* justify-content: space-between; */
 }
 
 #center-header {
+
     display: flex;
     align-items: center;
     flex-grow: 1;
@@ -25,8 +27,8 @@ body {
 }
 
 #search {
-    flex-grow: 1;
     height: 45px;
+    width: 90%;
     border-radius: 6px 0 0 6px;
     padding: 0 0 0 15px;
     border: none;
@@ -71,7 +73,7 @@ body {
 .menu {
     font-size: 20px;
     color: white;
-    width: 50px;
+  margin-left: 10px;
     text-align: right;
 }
 
@@ -100,7 +102,6 @@ body {
     height: 50px;
     width: 50px;
     background-size: contain;
-    background-image: url(./Icons/cart-icon.png);
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -145,7 +146,7 @@ body {
     background-color: #C3C3C3;
     display: flex;
     justify-content: space-evenly;
-    gap: 10px; 
+    gap: 15px; 
     flex-wrap: wrap;
     /* align-content: flex-start; */
 }
@@ -282,7 +283,7 @@ Proportional Shrinkage: The flex-shrink: 1 allows the item to shrink when needed
 }
 
 @media(max-width:635px) {
-    #amz-logo {
+    #amz-logo ,#cart-box {
         display: none;
     }
 
