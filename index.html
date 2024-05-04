@@ -21,42 +21,56 @@
 <body>
     <header>
         <div id="header">
+            <!-- Left Header Section -->
             <section id="left-header">
-
+                <!-- Logo and Address -->
                 <a class="logo-link" href="./cart.html">
                     <img id="amz-logo" src="./Icons/amazon-logo-white.png" alt="Amazon Logo">
-                    <img id="amz-logo2" src="./Icons/amazon-mobile-logo-white.png" alt="Amazon Logo">
+                    <img id="amz-logo2" src="./Icons/amazon-mobile-logo-white.png" alt="Amazon Mobile Logo">
                 </a>
                 <a class="address-link">
-                    <p style="font-size: 15px;">delivery to Vinit</p>
-                    <img src="./Icons/location.png" style="display: inline-block; vertical-align: middle;">
-                    <!-- vertical-align: middle; new concept -->
+                    <p style="font-size: 15px;">Delivery to Vinit</p>
+                    <img src="./Icons/location.png" alt="Location Icon" style="display: inline-block; vertical-align: middle;">
                     <h3 style="display: inline-block; vertical-align: middle;">India</h3>
                 </a>
+            </section>
 
+            <!-- Center Header Section -->
+            <section id="center-header">
+                <!-- Search Bar -->
+                <input id="search" placeholder="Search...">
+                <button id="search-button">
+                    <img src="./Icons/search-icon.png" style="height: 25px;" alt="Search Icon">
+                </button>
             </section>
-            <section id="center-header"><input id="search" placeholder="search...">
-                <button id="search-button"><img src="./Icons/search-icon.png" style="height: 25px;"></button>
-            </section>
+
+            <!-- Right Header Section -->
             <section id="right-header">
+                <!-- Language Selector -->
                 <div class="language-select-flag">
-                    <img src="./Icons/India (1).png" style="height: 40px; vertical-align: middle;">
+                    <img src="./Icons/India (1).png" style="height: 40px; vertical-align: middle;" alt="Indian Flag">
                     <select id="language" name="language" class="language-select">
-
                         <option>EN</option>
                         <option>HI</option>
                     </select>
                 </div>
+
+                <!-- Return & Orders -->
                 <a class="return-and-order-link">
-                    <p style="font-size: 15px;">return</p>
+                    <p style="font-size: 15px;">Returns</p>
                     <h3>& Orders</h3>
                 </a>
 
-                <a href="./shoppingCart.html"><div id="cart-box" style="background-image: url(./Icons/cart-icon.png);">3</div></a>
-                <div class="sidebar"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
-                        class="bi bi-list" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                <!-- Shopping Cart -->
+                <a href="./shoppingCart.html">
+                    <div id="cart-box" class="cart-quantity" style="background-image: url(./Icons/cart-icon.png);">
+                    </div>
+                </a>
+
+                <!-- Sidebar Menu -->
+                <div class="sidebar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                     </svg>
                 </div>
             </section>
@@ -71,7 +85,7 @@
         <div class="show-sidebar">
             <a>
                 <ul>
-                    <li>Cart(<span id="list-cartquantity" style="color: orange;">0</span>)</li>
+                    <li>Cart(<span id="list-cartquantity" style="color: orange;">3</span>)</li>
                     <li>Return and Orders</li>
                     <li>Language</li>
                     <li>Delivery Address</li>

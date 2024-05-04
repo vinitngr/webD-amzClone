@@ -53,12 +53,8 @@ function saveCart(){
     localStorage.setItem('cart' , JSON.stringify(cart));
 }
 
-let cartQuantity = 0;
-export function updateCartQuantity() {
-    cartQuantity++;
-    document.getElementById('cart-box').innerHTML = cartQuantity;
-    document.getElementById('list-cartquantity').innerHTML = cartQuantity;
-}
+
+
 
 
 export function removeItem(productId){
