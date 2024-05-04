@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    user-select: none;
+}
+
+body {
+    position: relative;
+}
+
+.show-sidebar {
+    text-align: center;
+    width: 100%;
+    padding: 20px 10px;
+    background-color: rgba(0, 0, 0, 0.864);
+    color: white;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    display: none;
+    margin-top: 50px;
+}
+.show-sidebar ul{
+    padding-left: 0;
+}
+.show-sidebar li {
+    padding: 5px;
+}
+.show-sidebar a {
+    color: white;
+}
+#Added{
+    height: 20px;
+    vertical-align: middle;
+}

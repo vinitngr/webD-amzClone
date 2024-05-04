@@ -1,0 +1,157 @@
+#header {
+    position: fixed;
+    top: 0px;
+    background-color: #131921;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    z-index: 5;
+    /* justify-content: space-between; */
+}
+
+#center-header {
+
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    /* justify-content: center; */
+}
+
+#search {
+    height: 45px;
+    width: 90%;
+    border-radius: 6px 0 0 6px;
+    padding: 0 0 0 15px;
+    border: none;
+    font-size: 18px;
+    color: rgb(44, 43, 43);
+
+}
+
+#search-button {
+    height: 45px;
+    width: 50px;
+    border-radius: 0 6px 6px 0;
+    border: none;
+    background-color: #FEBD69;
+}
+
+#search:focus {
+    outline: 2px solid orange;
+}
+
+#amz-logo {
+    height: 35px;
+}
+
+#amz-logo2 {
+    height: 40px;
+    margin-right: 10px;
+}
+
+
+#left-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.address-link {
+    color: white;
+    margin-left: 20px;
+}
+
+.sidebar {
+    font-size: 20px;
+    color: white;
+  margin-left: 10px;
+    text-align: right;
+}
+
+#right-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-width: 360px;
+}
+
+#left-header {
+    min-width: 320px;
+}
+
+/* #items-number {
+    position: absolute; 
+        
+    left: 40%;         
+    top: -5px;
+    background-color: rgb(233, 136, 0);
+    color: white;        
+    border-radius: 50%; 
+    padding: 2px 6px;   
+} */
+#cart-box {
+    height: 50px;
+    width: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    color: orange;
+
+}
+
+.language-select {
+    vertical-align: middle;
+    color: rgb(255, 255, 255);
+    height: 22px;
+    border-radius: 4px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+
+}
+
+.return-and-order-link {
+    color: white;
+}
+
+@media (max-width:900px) {
+
+    .language-select-flag,
+    .return-and-order-link,
+    .address-link , #cart-box {
+        display: none;
+    }
+    #left-header,
+    #right-header {
+        min-width: 0;
+        margin: 10px;
+    }
+}
+
+@media (min-width:901px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+@media(max-width:635px) {
+    #amz-logo ,#cart-box {
+        display: none;
+    }
+
+    #search,
+    #search-button {
+        height: 40px;
+    }
+}
+
+@media(min-width:636px) {
+    #amz-logo2 {
+        display: none;
+    }
+}
