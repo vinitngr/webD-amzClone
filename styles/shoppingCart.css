@@ -1,0 +1,115 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    /* border: 2px solid black; */
+
+}
+
+html {
+    background-color: #EAEDED;
+}
+
+#amazon-logo {
+    height: 50px;
+    margin: 10px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+}
+
+.cart-container {
+
+    background-color: white;
+    flex-grow: 1;
+    margin: 0 10px;
+    border-radius: 4px;
+    padding: 20px;
+}
+#header-cart{
+    position: relative;
+}
+#price-text{
+    position:absolute;
+    top: 70%;
+    right: 40px;
+}
+.payment-box {
+    width: 350px;
+    height: 450px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.shoppingCart-text {
+    font-size: xx-large;
+    color: #3d3d3d;
+
+    display: block;
+    flex-basis: 100%;
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+hr {
+    border-top: 1px solid rgb(220, 220, 220);
+}
+
+.cart-item {
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+
+/* .cart-item img{
+    height: 200px;
+    
+} */
+.img-box {
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.content {
+    /* height: 200px; */
+    flex: 1;
+    min-width: 600px;
+    background-color: green;
+}
+
+.details-price {
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    min-width: 500px;
+    /* change it in @media concept after ward */
+
+}
+
+.product-detail {
+    max-width: 420px;min-width: 270px;
+    flex: 1;
+    background-color: red;
+    padding: 10px;
+
+}
+
+.product-price {
+    background-color: aquamarine;
+    width: 90px;
+
+    align-self: start;
+}
+
+.product-arrival {
+    flex-grow: 0.4;
+    background-color: orchid;
+    /* max-width: 250px; */
+    min-width: 220px;
+}

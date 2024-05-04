@@ -91,9 +91,12 @@ Proportional Shrinkage: The flex-shrink: 1 allows the item to shrink when needed
     background-color: rgb(255, 225, 0);
     width: 70%;
     padding: 8px;
-    border-radius: 60px;
-    text-align: center;
+    border-radius: 40px;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 
 }
 

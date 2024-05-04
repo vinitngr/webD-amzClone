@@ -9,7 +9,7 @@ export const products = [
             price: 599
         }
 
-        , { id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+        , { id: "e4363d8ce-6aa0-4b85-b27f-e1d07eb678c6",
             imageUrl: './products/71NeU7k0eRL._AC_SY290_.jpg',
             name: "Men's Marvel T-shirt",
             rating: {
@@ -18,7 +18,7 @@ export const products = [
             },
             price: 499
         },
-        {   id: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
+        {   id: "15b6fc6f-327a-4ec4-8f96f-486349e85a3d",
             imageUrl: './products/women-chiffon-beachwear-coverup-black.jpg',
             name: "Women's Chiffon Beachwear Cover Up - Black",
             rating: {
@@ -27,7 +27,7 @@ export const products = [
             },
             price: 249
         },
-        {   id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
+        {   id: "83d4ca15-0sf35-48f5-b7a3-1ea210004f2e",
             imageUrl: './products/watch.jpg',
             name: "Smart Watch -bolt",
             rating: {
@@ -36,7 +36,7 @@ export const products = [
             },
             price: 1299
         },
-        {   id: "54e0eccd-8f36-462b-b68a-8182611d9add",
+        {   id: "54e0eccd-8f36-46fd2b-b68a-8182611d9add",
             imageUrl: './products/71eWZpgtFiL._AC_SY290_.jpg',
             name: "casual t-shirt set of 3",
             rating: {
@@ -45,7 +45,7 @@ export const products = [
             },
             price: 699
         },
-        {   id: "3ebe75dc-64d2-4137-8860-1f5a963e534b",
+        {   id: "3ebe75dc-6sdf4d2-4137-8860-1f5a963e534b",
             imageUrl: './products/61x1qmjozKL._AC_SY290_.jpg',
             name: "Vitamin-c face serum - from billare",
             rating: {
@@ -54,7 +54,7 @@ export const products = [
             },
             price: 950
         },
-        {   id: "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
+        {   id: "8c9c52b5-5a19-4bcdfdsb-a5d1-158a74287c53",
             imageUrl: './products/coffeemaker-with-glass-carafe-black.jpg',
             name: "Coffeemaker with Glass Carafe and Reusable Filter",
             rating: {
@@ -63,7 +63,7 @@ export const products = [
             },
             price: 2250
         },
-        {
+        {   id: "8c9c52b5-5a19as-4bcdfdsb-a5d1-158a74287c53",
             imageUrl: 'https://supersimple.dev/projects/amazon/images/products/blackout-curtains-black.jpg',
             name: "Blackout Curtains Set 42 x 84-Inch - Black, 2 Panels",
             rating: {
@@ -72,7 +72,7 @@ export const products = [
             },
             price: 389
         },
-        {
+        {   id: "8c9c52b5-5a19-4bcdfdssdb-a5d1-158a74287c53",
             imageUrl: 'https://m.media-amazon.com/images/I/4160gLMnfGL._SX300_SY300_QL70_FMwebp_.jpg',
             name: "SKYCELL Games Pubg Gaming Triggers for Mobile Button Trigger Works with BGMI, CODM & Other Shooting Games (1 Pair Gaming Button)",
             rating: {
@@ -81,7 +81,7 @@ export const products = [
             },
             price: 699
         },
-        {
+        {   id: "8c9c52bsd5-5a19-4bcdfdsb-a5d1-158a74287c53",
             imageUrl: 'https://assets.ajio.com/medias/sys_master/root/20230823/3J74/64e636a5afa4cf41f572f9ca/-473Wx593H-466488154-blue-MODEL.jpg',
             name: "Denim-Men's Regular Fit Jeans",
             rating: {
@@ -90,7 +90,7 @@ export const products = [
             },
             price: 1499
         },
-        {
+        {   id: "8c9c52bsd5-5a19-4bcdfdsb-a5d1-158a74287c53",
             imageUrl: 'https://m.media-amazon.com/images/I/31QB73-5IEL._SX300_SY300_QL70_FMwebp_.jpg',
             name: "Sony-Wireless Bluetooth Headphones",
             rating: {
@@ -99,7 +99,7 @@ export const products = [
             },
             price: 2499
         },
-        {
+        {   id: "8c9c52b5-5a19-4bcdfdsb-a5d1-1758a74287c53",
             imageUrl: 'https://m.media-amazon.com/images/I/41fCDR6pjpL._SX300_SY300_QL70_FMwebp_.jpg',
             name: "Galaxy s-20 Ultra -Smartphone with 128GB Storage",
             rating: {
@@ -108,7 +108,7 @@ export const products = [
             },
             price: 19999
         },
-        {
+        {   id: "8c9c52b5-5sda19-4bcdfdsb-a5d1-158a74287c53",
             imageUrl: 'https://contents.mediadecathlon.com/p2155606/d0d1270f3193ae010861df2822d17a07/p2155606.jpg?format=auto&quality=70&f=650x0',
             name: "Women's Athletic Running Shoes",
             rating: {
@@ -117,7 +117,7 @@ export const products = [
             },
             price: 2999
         },
-        {
+        {   id: "8c9c52b5-5a19-4bcdfdsb-a5dss1-158a74287c53",
             imageUrl: 'https://m.media-amazon.com/images/I/61fjq9eujBL._SL1500_.jpg',
             name: "Gaming Mouse with RGB Lighting",
             rating: {
@@ -126,7 +126,7 @@ export const products = [
             },
             price: 1499
         },
-        {
+        {   id: "8c9c52ssb5-5a19-4bcdfdsb-a5d1-158a74287c53",
             imageUrl: 'https://m.media-amazon.com/images/I/41X+sOw6HVL._SY300_SX300_.jpg',
             name: "Instant Coffee Maker",
             rating: {
@@ -135,7 +135,7 @@ export const products = [
             },
             price: 18499
         },
-        {
+        {   id: "8ssdc9c52b5-5a19-4bcdfdsb-a5d1-158a74287c53",
             imageUrl: 'https://m.media-amazon.com/images/I/8191db+HfLL._SL1500_.jpg',
             name: "Bluetooth Portable Speaker",
             rating: {
@@ -144,7 +144,7 @@ export const products = [
             },
             price: 1999
         },
-        {
+        {   id: "8c9sdsc52b5-5a19-4bcdfdsb-a5d1-158a74287c53",
             imageUrl: 'https://s3.ap-south-1.amazonaws.com/brandbuddiez.com//71/img/product/73/1226/1.webp',
             name: "Haier-32-inch Smart TV",
             rating: {
@@ -153,7 +153,7 @@ export const products = [
             },
             price: 10999
         },
-        {
+        {   id: "8c9sdsdsc52b5-5a19-4bcdfdsb-a5d1-158a74287c53",
             imageUrl: 'https://m.media-amazon.com/images/I/41zd-yE0QZL._SX300_SY300_QL70_FMwebp_.jpg',
             name: "Stainless Steel Kitchen Knife Set",
             rating: {
@@ -162,7 +162,7 @@ export const products = [
             },
             price: 2299
         },
-        {
+        {   id: "ass8sdsc9c52b5-5a19-4bcdfdsb-a5d1-158a74287c53",
             imageUrl: 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQKeGCv6YX6DbdWX4B54qEoHBh8CWj3QbhG-OGFUqk5jV6_0PfaoHZdNIPNWA12vjO8jlCeRYyQoaWlcJsqWMzzrV77UAnvgTGaDFuT9kYH4QYsJ3GW3Pde',
             name: "Sony PlayStation 5 PS5 Console",
             rating: {
@@ -172,7 +172,7 @@ export const products = [
             price: 45599
         },
         {
-          id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+          id: "e43638ce-6aa0-4b85-b27f-e1d07eb678cc6",
           imageUrl: "products/athletic-cotton-socks-6-pairs.jpg",
           name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
           rating: {
