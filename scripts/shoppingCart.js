@@ -37,7 +37,7 @@ cart.forEach((cartItem) => {
     </div>
 
 </div>
-<hr>` ;
+` ;
 });
 // console.log(HTMLcontent);
 
@@ -49,8 +49,9 @@ document.querySelectorAll('.remove-item')
         itemToRemove.addEventListener('click', () => {
             const productId = itemToRemove.dataset.productId;
             removeItem(productId);
+            console.log(cart);
             document.querySelector(`.cart-delete-${productId}`).remove();
-            document.querySelector('hr').remove();
+            
         });
 
     });

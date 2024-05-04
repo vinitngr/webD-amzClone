@@ -45,10 +45,11 @@ document.querySelector('.products-container').innerHTML = HTMLcontent;
 
 document.querySelectorAll('.product-addtocart').forEach((addButton) => {
     addButton.addEventListener('click', () => {
-        const productId = addButton.dataset.productId;
-        addtocart(productId);
+        const id = addButton.dataset.productId;
+        addtocart(id);
         added(addButton);
         updateCartQuantity();
+       
     });
 });
 
