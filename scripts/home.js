@@ -1,3 +1,8 @@
+import { cart } from "./data/cart.js";
+import { products } from "./data/product.js";
+
+
+
 let HTMLcontent = '';
 products.forEach((product) => {
     HTMLcontent = HTMLcontent + `<div class="product-shell">
@@ -16,6 +21,13 @@ products.forEach((product) => {
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
                 </select>
             </div>
         </div>
@@ -55,16 +67,11 @@ document.querySelectorAll('.product-addtocart').forEach((addButton) => {
 
 
 let sidebarVisible = false;
-function clickshowSidebar() {
-    if (!sidebarVisible) {
-        document.querySelector('.show-sidebar').style.display = 'block';
-    }
-    else {
-        document.querySelector('.show-sidebar').style.display = 'none';
-    }
-    sidebarVisible=!sidebarVisible;
-    
-}
+document.querySelector('.sidebar').addEventListener('click' ,()=>{
+    const sidebar = document.querySelector('.show-sidebar');
+    sidebar.style.display = sidebarVisible ? 'none' : 'block';
+    sidebarVisible = !sidebarVisible;
+})
 
 function added(addButton){
     addButton.innerHTML= " <img id='Added' src='./Icons/checkmark.png'> Added"

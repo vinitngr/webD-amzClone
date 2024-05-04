@@ -108,12 +108,9 @@ Proportional Shrinkage: The flex-shrink: 1 allows the item to shrink when needed
     border: 2px solid rgb(213, 213, 213);
     height: 40px;
     border-radius: 12px;
-    background-color: rgb(228, 228, 228);
-    width: 15%;
+    background-color: rgb(245, 245, 245);
+    width: 50px;
     padding-left: 5px;
 
 
 }
-/* .product-name:hover{
-    -webkit-line-clamp: 3;
-} */

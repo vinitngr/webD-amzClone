@@ -1,4 +1,4 @@
-    const products = [
+export const products = [
         {   id: "aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f",
             imageUrl: './products/men-cozy-fleece-zip-up-hoodie-red.jpg',
             name: "Red-hoodie 100% Cotton Bath Towels - 2 Pack, Light Teal",
