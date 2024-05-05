@@ -10,7 +10,7 @@ let HTMLcontent = `
 
 </div>
 <div id='price-text'>price</div>
-<a style="color: #007185;">delete all item</a>
+<a style="color: #007185;" id="delete-all-item">delete all item</a>
 <hr></div>
 `;
 cart.forEach((cartItem) => {
@@ -39,7 +39,6 @@ cart.forEach((cartItem) => {
 </div>
 ` ;
 });
-// console.log(HTMLcontent);
 
 document.querySelector('.cart-container').innerHTML = HTMLcontent;
 
@@ -51,7 +50,28 @@ document.querySelectorAll('.remove-item')
             removeItem(productId);
             console.log(cart);
             document.querySelector(`.cart-delete-${productId}`).remove();
-            
+            updateCartQuantity();
+
         });
 
     });
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateCartQuantity();
+});
+
+function updateCartQuantity() {
+    let cartQuantity = 0;
+    cart.forEach((cartItem) => {
+        cartQuantity += cartItem.quantity;
+
+    });
+    document.getElementById('cart-q').innerHTML = cartQuantity;
+
+};
+
+document.querySelector('#delete-all-item').addEventListener('click', () => {
+    let cart = [];
+    localStorage.setItem('cart', JSON.stringify(cart));
+    location.reload();
+});

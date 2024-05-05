@@ -1,34 +1,22 @@
 
-export let cart= JSON.parse(localStorage.getItem('cart'));
+export let cart = JSON.parse(localStorage.getItem('cart'));
 
-if(!cart){
-cart= [{
+if (!cart) {
+    cart = [{
         id: 'aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f',
         quantity: 2
     },
     {
         id: 'e4363d8ce-6aa0-4b85-b27f-e1d07eb678c6',
-        quantity:1
-    
+        quantity: 1
+
     },
     {
         id: "83d4ca15-0sf35-48f5-b7a3-1ea210004f2e",
-        quantity:5 
-    }];}
+        quantity: 5
+    }];
+}
 
-// export let cart= [{
-//         id: 'aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f',
-//         quantity: 2
-//     },
-//     {
-//         id: 'e4363d8ce-6aa0-4b85-b27f-e1d07eb678c6',
-//         quantity:1
-    
-//     },
-//     {
-//         id: "83d4ca15-0sf35-48f5-b7a3-1ea210004f2e",
-//         quantity:5 
-//     }];
 export function addtocart(id) {
     let matchingItem;
     cart.forEach((item) => {
@@ -49,18 +37,15 @@ export function addtocart(id) {
     console.log(cart);
 };
 
-function saveCart(){
-    localStorage.setItem('cart' , JSON.stringify(cart));
+function saveCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 
-
-
-
-export function removeItem(productId){
-    let newCart=[];
-    cart.forEach((cartItem)=>{
-        if(cartItem.id !== productId){
+export function removeItem(productId) {
+    let newCart = [];
+    cart.forEach((cartItem) => {
+        if (cartItem.id !== productId) {
             newCart.push(cartItem);
         }
     });
@@ -68,4 +53,4 @@ export function removeItem(productId){
     saveCart();
 }
 
-console.log(cart);
+// console.log(cart);

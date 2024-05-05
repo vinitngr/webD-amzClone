@@ -11,4 +11,19 @@ html {
 #amazon-logo {
     height: 50px;
     margin: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#Checkout-head{
+    position: relative;
+    text-align: center;
+    padding: 10px;
+}
+#Checkout{
+    margin: 0;
+}
+#cart-q{
+    color: orange;
 }
