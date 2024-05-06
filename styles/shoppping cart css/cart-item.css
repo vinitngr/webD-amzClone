@@ -67,7 +67,7 @@ hr {
     /* height: 200px; */
     flex: 1;
     min-width: 600px;
-    background-color: green;
+    background-color: rgb(239, 239, 239);
 }
 
 .details-price {
@@ -80,15 +80,15 @@ hr {
 }
 
 .product-detail {
-    max-width: 420px;min-width: 270px;
+    max-width: 390px;
     flex: 1;
-    background-color: red;
+    background-color: rgb(225, 225, 225);
     padding: 10px;
 
 }
 
 .product-price {
-    background-color: aquamarine;
+    background-color: rgb(215, 215, 215);
     width: 90px;
 
     align-self: start;
@@ -96,7 +96,7 @@ hr {
 
 .product-arrival {
     flex-grow: 0.4;
-    background-color: orchid;
+    background-color: rgb(231, 231, 231);
     /* max-width: 250px; */
     min-width: 220px;
 }

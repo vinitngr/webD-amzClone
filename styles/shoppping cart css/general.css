@@ -14,12 +14,14 @@ html {
     position: absolute;
     top: 0px;
     left: 0px;
+    
 }
 
 #Checkout-head{
     position: relative;
     text-align: center;
     padding: 10px;
+    margin-bottom: 60px;
 }
 #Checkout{
     margin: 0;

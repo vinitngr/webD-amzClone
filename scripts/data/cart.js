@@ -40,8 +40,6 @@ export function addtocart(id) {
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
-
-
 export function removeItem(productId) {
     let newCart = [];
     cart.forEach((cartItem) => {

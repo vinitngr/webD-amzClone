@@ -28,7 +28,7 @@ cart.forEach((cartItem) => {
     <div class="content">
         <div class="details-price">
         
-            <div class="product-detail">Quantity:${cartItem.quantity} , Name: ${matchingItem.name}
+            <div class="product-detail" style="font-weight:500 ; font-size:20px">Quantity:${cartItem.quantity} , Name: ${matchingItem.name}
                 <button data-product-id=${matchingItem.id} class='remove-item'>delete</button></div>
             <div class="product-arrival"></div>
             <div class="product-price">price : ${matchingItem.price}</div>

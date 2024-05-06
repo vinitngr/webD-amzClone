@@ -80,7 +80,6 @@ function added(addButton) {
     }, 1500);
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
     updateCartQuantity();
 });
