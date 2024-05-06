@@ -29,3 +29,22 @@ html {
 #cart-q{
     color: orange;
 }
+
+@media(max-width:1220px) {
+
+    #amazon-logo{
+        /* display: none; */
+        height: 20px;
+        margin: 0px;
+       
+    }
+    #Checkout{
+        padding-top: 20px;
+        font-size: 20px;
+    }
+    #Checkout-head{
+
+        margin-bottom: 10px;
+    }
+   
+}

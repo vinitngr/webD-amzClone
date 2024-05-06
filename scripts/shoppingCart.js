@@ -5,13 +5,14 @@ import { cart, removeItem } from "./data/cart.js";
 // console.log(products);
 // console.log(removeItem);
 let HTMLcontent = `
-<div id='header-cart'>
-<div class="shoppingCart-text">Shopping Cart
+    <div id='header-cart'>
+    <div class="shoppingCart-text">Shopping Cart
 
-</div>
-<div id='price-text'>price</div>
-<a style="color: #007185;" id="delete-all-item">delete all item</a>
-<hr></div>
+    </div>
+    <div id='price-text'>price</div>
+    <a style="color: #007185;" id="delete-all-item">delete all item</a>
+    <hr>
+    </div>
 `;
 cart.forEach((cartItem) => {
     let matchingItem;
@@ -22,25 +23,46 @@ cart.forEach((cartItem) => {
     });
 
     HTMLcontent += `
-    <div class="cart-item cart-delete-${matchingItem.id}">
-    <div class="img-box"
-        style="background-image: url('.${matchingItem.imageUrl}');"></div>
-    <div class="content">
-        <div class="details-price">
-        
-            <div class="product-detail" style="font-weight:500 ; font-size:20px">Quantity:${cartItem.quantity} , Name: ${matchingItem.name}
-                <button data-product-id=${matchingItem.id} class='remove-item'>delete</button></div>
-            <div class="product-arrival"></div>
-            <div class="product-price">price : ${matchingItem.price}</div>
+    <div class="item item-${matchingItem.id}">
+    <div id="image"><img
+            src="${matchingItem.imageUrl}">
+    </div>
+    <div class="leftbox" >
+        <div class="pro-name p">${matchingItem.name}
         </div>
 
+        <div class="pro-quantity p">Quantity: ${cartItem.quantity}</div>
+       
+        <div class="update-delete">
+            <button  class="delete remove-item" id='delete-all-item' data-product-id=${matchingItem.id} >delete</button>
+            <button class="update">update</button>
+        </div>
+      
+        <div class="pro-arrival p" style="font-weight:bolder; color:#007600" >Delivery Date : sunday , May 15</div>
     </div>
-
+    <div class="middlebox" >
+    <label style='font-weight:bold'>Choose a delivery option:</label>
+        <label>
+            <input type="radio" name="${matchingItem.id}" value="1"> Option 1
+        </label>
+        <label>
+            <input type="radio" name="${matchingItem.id}" value="2"> Option 2
+        </label>
+        <label>
+            <input type="radio" name="${matchingItem.id}" value="3"> Option 3
+        </label>
+    </div>
+    <div class="rightbox" >₹${matchingItem.price}.00</div>
 </div>
+
+
+
+
+
 ` ;
 });
 
-document.querySelector('.cart-container').innerHTML = HTMLcontent;
+document.querySelector('.container').innerHTML = HTMLcontent;
 
 
 document.querySelectorAll('.remove-item')
@@ -49,9 +71,9 @@ document.querySelectorAll('.remove-item')
             const productId = itemToRemove.dataset.productId;
             removeItem(productId);
             console.log(cart);
-            document.querySelector(`.cart-delete-${productId}`).remove();
+            document.querySelector(`.item-${productId}`).remove();
             updateCartQuantity();
-
+        
         });
 
     });
@@ -75,3 +97,5 @@ document.querySelector('#delete-all-item').addEventListener('click', () => {
     localStorage.setItem('cart', JSON.stringify(cart));
     location.reload();
 });
+
+

@@ -1,33 +1,171 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    background-color: rgb(238, 238, 238);
+    
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 200px 1fr 0.8fr auto;
+    /* height: 200px; */
+    /* margin: 0px 20px 0px 0px; */
+    padding-bottom: 40px;
+    padding-top: 10px;
+    border-bottom: 2px solid rgb(227, 227, 227);
+
+}
+
+.rightdiv {
+    width: 400px;
+    background-color: rgb(201, 201, 201);
+    height: 450px;
+ 
+    text-align: right;
+}
+
 .container {
+    flex: 1;
+    border-radius: 10px;
+}
+
+main {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
+    /* justify-content: space-between; */
+    gap: 10px;
+  
+
 
 }
 
-.cart-container {
+.rightbox {
+    text-align: right;
+    padding-right: 35px;
+    padding-top: 20px;
+    font-weight: bold;
+    color: #B12704;
 
-    background-color: white;
-    flex-grow: 1;
-    margin: 0 10px;
-    border-radius: 4px;
-    padding: 20px;
+  
 }
+ .middlebox{
+    display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+        /* justify-content: space-evenly; */
+ }
+ .leftbox{
+    display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+ }
+@media(max-width:1220px) {
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #price-text{
+        display: none;
+    }
+    .container {
+        width: 60%;
+        min-width: 360px;
+      
+      
+    }
+
+    .rightdiv {
+        width: 360px;
+    }
+
+    .item {
+        grid-template-columns: 70% 30%;
+        grid-template-rows: 200px 1fr 130px;
+        grid-template-areas:
+            "img img "
+            "left left"
+            "middle right";
+        height: auto;
+        /* border: 1px solid rgb(180, 180, 180); */
+        margin:5px;
+        margin-top: 30px;
+        padding-bottom:30px;
+        border-bottom: 2px solid rgb(211, 211, 211);
+        
+    }
+
+    #image {
+        grid-area: img;
+    }
+
+    .leftbox {
+        grid-area: left;
+     
+    }
+
+    .middlebox {
+        grid-area: middle;
+        border-radius: 0 0 0 11px;
+    }
+
+    .rightbox {
+        grid-area: right;
+    }
+    #image img {
+        max-height: 100%;
+        /* max-width: 70%; */
+
+    }
+}
+
+label {
+    padding: 5px;
+}
+
+input[type="radio"] {
+    transform: scale(1.5);
+    accent-color: rgb(8, 113, 166);
+    margin-right: 8px;
+}
+
+.p {
+    padding: 5px 0px;
+    width: 100%;
+}
+
+
+
+button {
+    border-radius: 50px;
+    background-color: rgb(88, 108, 233);
+    border: none;
+    color: white;
+    margin: 5px;
+    height: 25px;
+    width: 60px;
+    box-shadow: 1px 1px 3px 0px rgb(96, 96, 96);
+}
+
+#image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#image img {
+    
+    max-width: 60%;
+    /* max-width: 100px; */
+    margin-left:20px ;
+
+} 
 #header-cart{
     position: relative;
+    padding: 20px 20px 10px 20px;
 }
-#price-text{
-    position:absolute;
-    top: 70%;
-    right: 40px;
-}
-.payment-box {
-    width: 350px;
-    height: 450px;
-    background-color: white;
-    border-radius: 4px;
-}
-
 .shoppingCart-text {
     font-size: xx-large;
     color: #3d3d3d;
@@ -37,66 +175,17 @@
     margin: 0px;
     margin-bottom: 5px;
 }
-
+#price-text{
+    position:absolute;
+    top: 60%;
+    right: 40px;
+}
 hr {
     border-top: 1px solid rgb(220, 220, 220);
 }
-
-.cart-item {
-    padding: 10px;
-    display: flex;
-    gap: 20px;
-    padding-bottom: 40px;
-    border-bottom: 2px solid rgb(231, 231, 231);
+.pro-name{
+    font-weight: 600;
 }
-
-
-/* .cart-item img{
-    height: 200px;
-    
-} */
-.img-box {
-    height: 200px;
-    width: 200px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.content {
-    /* height: 200px; */
-    flex: 1;
-    min-width: 600px;
-    background-color: rgb(239, 239, 239);
-}
-
-.details-price {
-    height: 100%;
-    display: flex;
-    gap: 10px;
-    min-width: 500px;
-    /* change it in @media concept after ward */
-
-}
-
-.product-detail {
-    max-width: 390px;
-    flex: 1;
-    background-color: rgb(225, 225, 225);
-    padding: 10px;
-
-}
-
-.product-price {
-    background-color: rgb(215, 215, 215);
-    width: 90px;
-
-    align-self: start;
-}
-
-.product-arrival {
-    flex-grow: 0.4;
-    background-color: rgb(231, 231, 231);
-    /* max-width: 250px; */
-    min-width: 220px;
+.delete{
+    background-color: rgb(230, 206, 18);
 }
