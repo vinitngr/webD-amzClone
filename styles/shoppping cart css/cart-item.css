@@ -77,7 +77,8 @@ main {
     }
 
     .rightdiv {
-        width: 360px;
+        width: 60%;
+        min-width: 360px;
     }
 
     .item {
@@ -112,6 +113,7 @@ main {
 
     .rightbox {
         grid-area: right;
+        
     }
     #image img {
         max-height: 100%;
