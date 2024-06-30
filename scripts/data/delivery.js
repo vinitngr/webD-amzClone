@@ -2,7 +2,7 @@ export const delivery = [
     {
         deliveryId: 1,
         deliveryDays: 7,
-        deliveryCost: 0
+        deliveryCost: 0 
 
     },
     {

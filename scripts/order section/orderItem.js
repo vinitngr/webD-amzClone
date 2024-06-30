@@ -1,13 +1,9 @@
 import { products } from "../data/product.js";
-import {removeItem ,cart} from "../data/cart.js"
+import { removeItem, cart } from "../data/cart.js"
 
-
-// console.log(cart);
-// console.log(products);
-// console.log(removeItem);
 orderItem();
-export function orderItem(){
-let HTMLcontent = `
+export function orderItem() {
+    let HTMLcontent = `
     <div id='header-cart'>
     <div class="shoppingCart-text">Shopping Cart
 
@@ -17,15 +13,15 @@ let HTMLcontent = `
     <hr>
     </div>
 `;
-cart.forEach((cartItem) => {
-    let matchingItem;
-    products.forEach((product) => {
-        if (cartItem.id === product.id) {
-            matchingItem = product;
-        }
-    });
-    
-    HTMLcontent += `
+    cart.forEach((cartItem) => {
+        let matchingItem;
+        products.forEach((product) => {
+            if (cartItem.id === product.id) {
+                matchingItem = product;
+            }
+        });
+
+        HTMLcontent += `
     <div class="item item-${matchingItem.id}">
     <div id="image"><img
             src="${matchingItem.imageUrl}">
@@ -63,17 +59,32 @@ cart.forEach((cartItem) => {
 
 
 ` ;
-});
+    });
 
-document.querySelector('.container').innerHTML = HTMLcontent;
+    document.querySelector('.container').innerHTML = HTMLcontent;
+
+    document.querySelectorAll('.remove-item')
+        .forEach((itemToRemove) => {
+            itemToRemove.addEventListener('click', () => {
+                const productId = itemToRemove.dataset.productId;
+                removeItem(productId);
+                console.log(cart);
+                document.querySelector(`.item-${productId}`).remove();
+                updateCartQuantity();
+
+            });
+
+        });
+
+
+    document.querySelector('#delete-all-item').addEventListener('click', () => {
+        let cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        location.reload();
+    });
+
+
 }
-
-
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     updateCartQuantity();
-// });
 
 export function updateCartQuantity() {
     let cartQuantity = 0;
