@@ -48,7 +48,9 @@ document.querySelector('.products-container').innerHTML = HTMLcontent;
 document.querySelectorAll('.product-addtocart').forEach((addButton) => {
     addButton.addEventListener('click', () => {
         const id = addButton.dataset.productId;
-        addtocart(id);
+        const quantitySelect = addButton.closest('.product-add-quantity').querySelector('.quantity');
+        const quantitySelected = quantitySelect.value;
+        addtocart(id , quantitySelected);
         added(addButton);
         updateCartQuantity();
 
@@ -80,6 +82,6 @@ function added(addButton) {
     }, 1500);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    updateCartQuantity();
-});
+
+updateCartQuantity();
+
