@@ -1,4 +1,4 @@
-export const delivery = [
+export const deliveryOptions = [
     {
         deliveryId: 1,
         deliveryDays: 7,

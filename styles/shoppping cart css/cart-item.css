@@ -34,8 +34,6 @@ main {
     display: flex;
     /* justify-content: space-between; */
     gap: 10px;
-  
-
 
 }
 
@@ -83,7 +81,7 @@ main {
 
     .item {
         grid-template-columns: 70% 30%;
-        grid-template-rows: 200px 1fr 130px;
+        grid-template-rows: 200px auto 190px;
         grid-template-areas:
             "img img "
             "left left"
@@ -103,12 +101,17 @@ main {
 
     .leftbox {
         grid-area: left;
+        gap: 5px;
+       
      
     }
 
     .middlebox {
         grid-area: middle;
         border-radius: 0 0 0 11px;
+        gap: 0px;
+        border-top: 2px solid rgb(247, 247, 247);
+
     }
 
     .rightbox {
@@ -120,6 +123,7 @@ main {
         /* max-width: 70%; */
 
     }
+ 
 }
 
 label {
@@ -137,18 +141,6 @@ input[type="radio"] {
     width: 100%;
 }
 
-
-
-button {
-    border-radius: 50px;
-    background-color: rgb(88, 108, 233);
-    border: none;
-    color: white;
-    margin: 5px;
-    height: 25px;
-    width: 60px;
-    box-shadow: 1px 1px 3px 0px rgb(96, 96, 96);
-}
 
 #image {
     display: flex;
@@ -188,6 +180,31 @@ hr {
 .pro-name{
     font-weight: 600;
 }
-.delete{
-    background-color: rgb(230, 206, 18);
+.update{
+    margin-left: 10px;
+    border-left: 2px solid rgb(191, 191, 191);
+    padding:0 10px;
+}
+
+.pro-arrival{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight:bolder; color:#007600;
+
+}
+
+label {
+    display: flex;
+}
+.deliverDate{
+    color: #007600;
+    font-weight: bolder;
+}
+.deliveryDate-Price{
+    margin-left: 5px;
+}
+.deliveryPrice{
+    font-size: 15px;
+    color: rgb(135, 132, 132);
+    margin-top: 4px;
 }

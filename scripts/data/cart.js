@@ -2,19 +2,23 @@
 export let cart = JSON.parse(localStorage.getItem('cart'));
 
 if (!cart) {
-    cart = [{
-        id: 'aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f',
-        quantity: 2
-    },
-    {
-        id: 'e4363d8ce-6aa0-4b85-b27f-e1d07eb678c6',
-        quantity: 1
-
-    },
-    {
-        id: "83d4ca15-0sf35-48f5-b7a3-1ea210004f2e",
-        quantity: 5
-    }];
+    cart = [
+        {
+            id: 'aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f',
+            quantity: 2,
+            deliveryOptionId: '2'
+        },
+        {
+            id: 'e4363d8ce-6aa0-4b85-b27f-e1d07eb678c6',
+            quantity: 1,
+            deliveryOptionId: '3'
+        },
+        {
+            id: "83d4ca15-0sf35-48f5-b7a3-1ea210004f2e",
+            quantity: 5,
+            deliveryOptionId: '1'
+        }
+    ];
 }
 
 export function addtocart(id , quantitySelected) {
@@ -22,16 +26,18 @@ export function addtocart(id , quantitySelected) {
     cart.forEach((item) => {
         if (id === item.id) {
             matchingItem = item;
+        
         }
     });
     if (matchingItem) {
 
-        matchingItem.quantity = matchingItem.quantity + 1*quantitySelected;
+        matchingItem.quantity = matchingItem.quantity + Number(quantitySelected);
     }
     else {
         cart.push({
             id: id,
-            quantity: 1
+            quantity: Number(quantitySelected),
+            deliveryOptionId: '2'
         });
     }
     saveCart();
@@ -50,6 +56,26 @@ export function removeItem(productId) {
     });
     cart = newCart;
     saveCart();
+    
 }
 
-// console.log(cart);
+
+// cart.forEach((cartItem) => {
+//     let matchingItem;
+//     products.forEach((product) => {
+//         if (cartItem.id === product.id) {
+//             matchingItem = product;
+//         }
+//     });
+
+//     const today= dayjs();
+//     const deliveryDate= today.add(deliveryOption.deliveryDays , 'days');
+//     const dateString = deliveryDate.format('dddd , MMMM D')
+
+//     const deliveryOptionId = cartItem.deliveryOptionId  ;
+//     let deliveryOption ;
+//     deliveryOptions.forEach((option) =>{
+//         if(option.id === deliveryOptionId){
+//             deliveryOption =option ;
+//         }
+//     })

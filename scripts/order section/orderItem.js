@@ -1,8 +1,24 @@
 import { products } from "../data/product.js";
 import { removeItem, cart } from "../data/cart.js"
+import { deliveryOptions } from "../data/delivery.js";
+import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
 
-orderItem();
+
 export function orderItem() {
+
+    // const deliveryOptionId = cartItem.deliveryOptionId  ;
+    // let deliveryOption ;
+    // deliveryOptions.forEach((option) =>{
+    //     if(option.id === deliveryOptionId){
+    //         deliveryOption =option ;
+    //     }
+    // });
+
+    // const today= dayjs();
+    // const deliveryDate= today.add(deliveryOption.deliveryDays , 'days');
+    // const dateString = deliveryDate.format('dddd , MMMM D');
+
+
     let HTMLcontent = `
     <div id='header-cart'>
     <div class="shoppingCart-text">Shopping Cart
@@ -20,6 +36,33 @@ export function orderItem() {
                 matchingItem = product;
             }
         });
+    
+        
+
+
+
+
+
+
+    const deliveryOptionId = cartItem.deliveryOptionId  ;
+    let deliveryOption ;
+    deliveryOptions.forEach((option) =>{
+        if(option.id === deliveryOptionId){
+            deliveryOption =option ;
+        }
+    });
+
+    // const today= dayjs();
+    // const deliveryDate= today.add(deliveryOption.deliveryDays , 'days');
+    // const dateString = deliveryDate.format('dddd , MMMM D');
+
+
+
+
+
+
+
+
 
         HTMLcontent += `
     <div class="item item-${matchingItem.id}">
@@ -33,24 +76,24 @@ export function orderItem() {
         <div class="pro-quantity p">Quantity: ${cartItem.quantity}</div>
        
         <div class="update-delete">
-            <button  class="delete remove-item" id='delete-all-item' data-product-id=${matchingItem.id} >delete</button>
-            <button class="update">update</button>
+            <a  class="delete remove-item" id='delete-all-item' data-product-id=${matchingItem.id} >delete</a>
+            <a class="update">update</a>
         </div>
       
-        <div class="pro-arrival p" style="font-weight:bolder; color:#007600" >Delivery Date : sunday , May 15</div>
+        <div class="pro-arrival p"  >Delivery Date : sunday , May 15</div>
     </div>
-    <div class="middlebox" >
-    <label style='font-weight:bold'>Choose a delivery option:</label>
-        <label>
-            <input type="radio" name="${matchingItem.id}" value="1"> Option 1
-        </label>
-        <label>
-            <input type="radio" name="${matchingItem.id}" value="2"> Option 2
-        </label>
-        <label>
-            <input type="radio" name="${matchingItem.id}" value="3"> Option 3
-        </label>
-    </div>
+
+
+
+        <div class="middlebox">
+            <label style='font-weight:bold ; color: rgb(26, 26, 26); padding: 0 0; margin-bottom:10px'>Choose a delivery option:</label>
+            ${
+                deliveryOptionHTML(matchingItem ,cartItem)
+            }
+        </div>
+
+
+
     <div class="rightbox" >₹${matchingItem.price}.00</div>
 </div>
 
@@ -59,7 +102,35 @@ export function orderItem() {
 
 
 ` ;
+
     });
+
+    function deliveryOptionHTML(matchingItem ,cartItem) {
+        let HTML ='';
+        deliveryOptions.forEach((deliveryOption)=>{
+            const today= dayjs();
+            const deliveryDate= today.add(deliveryOption.deliveryDays , 'days');
+            const dateString = deliveryDate.format('dddd , MMMM D')
+            const priceRs = deliveryOption.deliveryCost ===0 ? 'FREE- shipping': `₹${deliveryOption.deliveryCost}- shipping`;
+        
+        const isChecked = deliveryOption.deliveryId == cartItem.deliveryOptionId;
+        
+        
+       
+    HTML+=
+        `<label class="deliveryOptions">
+        <input type="radio" name="delivery-opotion-${matchingItem.id}" 
+        ${isChecked ? 'checked' : ''}>
+        <div class="deliveryDate-Price">
+            <div class="deliverDate">${dateString}</div>
+            <div class="deliveryPrice">${priceRs}</div>
+        </div>
+
+        </label>`
+        });
+        return HTML;
+
+    }
 
     document.querySelector('.container').innerHTML = HTMLcontent;
 
@@ -68,7 +139,7 @@ export function orderItem() {
             itemToRemove.addEventListener('click', () => {
                 const productId = itemToRemove.dataset.productId;
                 removeItem(productId);
-                console.log(cart);
+                // console.log(cart);
                 document.querySelector(`.item-${productId}`).remove();
                 updateCartQuantity();
 
