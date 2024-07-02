@@ -1,3 +1,4 @@
+import { orderItem } from '../order section/orderItem.js';
 
 export let cart = JSON.parse(localStorage.getItem('cart'));
 
@@ -21,12 +22,12 @@ if (!cart) {
     ];
 }
 
-export function addtocart(id , quantitySelected) {
+export function addtocart(id, quantitySelected) {
     let matchingItem;
     cart.forEach((item) => {
         if (id === item.id) {
             matchingItem = item;
-        
+
         }
     });
     if (matchingItem) {
@@ -56,26 +57,21 @@ export function removeItem(productId) {
     });
     cart = newCart;
     saveCart();
-    
+
 }
 
+export function updateDeliveryOption(productId, deliveryOptionId) {
+    let matchingItem;
 
-// cart.forEach((cartItem) => {
-//     let matchingItem;
-//     products.forEach((product) => {
-//         if (cartItem.id === product.id) {
-//             matchingItem = product;
-//         }
-//     });
+    cart.forEach((item) => {
+        if (productId === item.id) {
+            matchingItem = item;
+        }
+    });
 
-//     const today= dayjs();
-//     const deliveryDate= today.add(deliveryOption.deliveryDays , 'days');
-//     const dateString = deliveryDate.format('dddd , MMMM D')
-
-//     const deliveryOptionId = cartItem.deliveryOptionId  ;
-//     let deliveryOption ;
-//     deliveryOptions.forEach((option) =>{
-//         if(option.id === deliveryOptionId){
-//             deliveryOption =option ;
-//         }
-//     })
+    if (matchingItem) {
+        matchingItem.deliveryOptionId = deliveryOptionId;
+        saveCart();
+    }
+    orderItem();
+}
