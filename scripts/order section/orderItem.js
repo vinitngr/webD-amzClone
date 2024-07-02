@@ -1,7 +1,6 @@
 import { products } from "../data/product.js";
 import { removeItem, cart, updateDeliveryOption } from "../data/cart.js";
 import { deliveryOptions } from "../data/delivery.js";
-
 import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
 
 export function orderItem() {
@@ -25,14 +24,18 @@ export function orderItem() {
         const deliveryOptionId = cartItem.deliveryOptionId;
         let deliveryOption;
         deliveryOptions.forEach((option) => {
-            if (option.id === deliveryOptionId) {
+         
+            if (option.deliveryId == deliveryOptionId) {
                 deliveryOption = option;
-            }
-        });
 
-        // const today = dayjs();
-        // const deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
-        // const dateString = deliveryDate.format('dddd, MMMM D');
+            }
+        
+        
+        });
+       
+        const today = dayjs();
+        const deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
+        const dateString = deliveryDate.format('dddd, MMMM D');
 
         HTMLcontent += `
             <div class="item item-${matchingItem.id}">
@@ -44,7 +47,7 @@ export function orderItem() {
                         <a class="delete remove-item" id='delete-all-item' data-product-id="${matchingItem.id}">delete</a>
                         <a class="update">update</a>
                     </div>
-                    <div class="pro-arrival p">${dateString}</div>
+                    <div class="pro-arrival p">Delivery date: ${dateString}</div>
                 </div>
                 <div class="middlebox">
                     <label style='font-weight:bold; color: rgb(26, 26, 26); padding: 0 0; margin-bottom:10px'>Choose a delivery option:</label>
