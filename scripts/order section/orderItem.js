@@ -24,19 +24,19 @@ export function orderItem() {
         const deliveryOptionId = cartItem.deliveryOptionId;
         let deliveryOption;
         deliveryOptions.forEach((option) => {
-         
+
             if (option.deliveryId == deliveryOptionId) {
                 deliveryOption = option;
 
             }
-        
-        
+
+
         });
-       
+        
         const today = dayjs();
         const deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
         const dateString = deliveryDate.format('dddd, MMMM D');
-
+        console.log(cartItem.quantity);
         HTMLcontent += `
             <div class="item item-${matchingItem.id}">
                 <div id="image"><img src="${matchingItem.imageUrl}"></div>
@@ -45,7 +45,13 @@ export function orderItem() {
                     <div class="pro-quantity p">Quantity: ${cartItem.quantity}</div>
                     <div class="update-delete">
                         <a class="delete remove-item" id='delete-all-item' data-product-id="${matchingItem.id}">delete</a>
-                        <a class="update">update</a>
+                        <div class="update" data-update-item="${matchingItem.id}">
+                            <a class= "update-button">update</a>
+                            <input type="number" class="Uinput" min="1" max="99" value='${cartItem.quantity}' />
+
+
+                               
+                               </div>
                     </div>
                     <div class="pro-arrival p">Delivery date: ${dateString}</div>
                 </div>
@@ -93,9 +99,12 @@ export function orderItem() {
     });
 
     document.querySelector('#delete-all-item').addEventListener('click', () => {
-        let cart = [];
+        // let cart = [];
+        cart.length = 0;
         localStorage.setItem('cart', JSON.stringify(cart));
-        location.reload();
+        // 
+        orderItem();
+        updateCartQuantity();
     });
 
     document.querySelectorAll('.js-delivery-option input[type="radio"]').forEach((element) => {
@@ -105,6 +114,45 @@ export function orderItem() {
             updateDeliveryOption(productId, deliveryOptionId);
         });
     });
+
+
+
+
+    document.querySelectorAll('.update-button').forEach((element) => {
+        let UpdateInput = false;
+    
+        element.addEventListener('click', () => {
+            let productId = element.parentElement.dataset.updateItem;
+            const inputElement = element.nextElementSibling;
+    
+            if (!UpdateInput) {
+                inputElement.style.visibility = 'visible';
+            } else {
+                inputElement.style.visibility = 'hidden';
+                let matchingItem;
+    
+                cart.forEach((item) => {
+                    if (item.id == productId) {
+                        matchingItem = item;
+                    }
+                });
+    
+                if (matchingItem) {
+                    // console.log(typeof inputElement.value);
+                    matchingItem.quantity = parseInt(inputElement.value); // Use inputElement to get the new value
+                    localStorage.setItem('cart', JSON.stringify(cart)); 
+                    updateCartQuantity();  //for update cart qunatity 
+                    orderItem();
+                }
+            }
+    
+            UpdateInput = !UpdateInput;
+            
+        });
+    });
+    
+
+    
 }
 
 export function updateCartQuantity() {

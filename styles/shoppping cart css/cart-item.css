@@ -151,7 +151,7 @@ input[type="radio"] {
 
 #image img {
     
-    max-width: 60%;
+    max-width: 90%;
     /* max-width: 100px; */
     margin-left:20px ;
 
@@ -208,3 +208,19 @@ label {
     color: rgb(135, 132, 132);
     margin-top: 4px;
 }
+
+
+
+.update-delete{
+    display: flex;
+}
+
+input[type="number"]{
+    visibility:hidden;
+}
+/* .update-{
+    
+} */
+/* input[type="number"]{
+    visibility: visible;
+} */
