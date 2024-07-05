@@ -120,10 +120,10 @@ export function orderItem() {
 
     document.querySelectorAll('.update-button').forEach((element) => {
         let UpdateInput = false;
-    
-        element.addEventListener('click', () => {
-            let productId = element.parentElement.dataset.updateItem;
+           let productId = element.parentElement.dataset.updateItem;
             const inputElement = element.nextElementSibling;
+        element.addEventListener('click', () => {
+     
     
             if (!UpdateInput) {
                 inputElement.style.visibility = 'visible';

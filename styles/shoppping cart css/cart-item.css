@@ -152,8 +152,10 @@ input[type="radio"] {
 #image img {
     
     max-width: 90%;
+    max-height: 70%;
     /* max-width: 100px; */
     margin-left:20px ;
+
 
 } 
 #header-cart{
