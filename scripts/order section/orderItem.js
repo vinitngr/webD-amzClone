@@ -2,8 +2,10 @@ import { products } from "../data/product.js";
 import { removeItem, cart, updateDeliveryOption } from "../data/cart.js";
 import { deliveryOptions } from "../data/delivery.js";
 import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
+import { renderPaymentSummary } from "./payment.js";
 
-export function orderItem() {
+
+export function renderOrderSummary() {
     let HTMLcontent = `
         <div id='header-cart'>
             <div class="shoppingCart-text">Shopping Cart</div>
@@ -36,7 +38,7 @@ export function orderItem() {
         const today = dayjs();
         const deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
         const dateString = deliveryDate.format('dddd, MMMM D');
-        console.log(cartItem.quantity);
+      
         HTMLcontent += `
             <div class="item item-${matchingItem.id}">
                 <div id="image"><img src="${matchingItem.imageUrl}"></div>
@@ -95,6 +97,7 @@ export function orderItem() {
             removeItem(productId);
             document.querySelector(`.item-${productId}`).remove();
             updateCartQuantity();
+            renderPaymentSummary();
         });
     });
 
@@ -103,8 +106,9 @@ export function orderItem() {
         cart.length = 0;
         localStorage.setItem('cart', JSON.stringify(cart));
         // 
-        orderItem();
+        renderOrderSummary();
         updateCartQuantity();
+        renderPaymentSummary();
     });
 
     document.querySelectorAll('.js-delivery-option input[type="radio"]').forEach((element) => {
@@ -112,6 +116,7 @@ export function orderItem() {
             const productId = this.dataset.productId;
             const deliveryOptionId = this.dataset.deliveryOptionId;
             updateDeliveryOption(productId, deliveryOptionId);
+            renderPaymentSummary();
         });
     });
 
@@ -142,12 +147,12 @@ export function orderItem() {
                     matchingItem.quantity = parseInt(inputElement.value); // Use inputElement to get the new value
                     localStorage.setItem('cart', JSON.stringify(cart)); 
                     updateCartQuantity();  //for update cart qunatity 
-                    orderItem();
+                    renderOrderSummary();
                 }
             }
     
             UpdateInput = !UpdateInput;
-            
+            renderPaymentSummary();
         });
     });
     

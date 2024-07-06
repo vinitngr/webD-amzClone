@@ -1,4 +1,4 @@
-import { orderItem } from '../order section/orderItem.js';
+import { renderOrderSummary } from '../order section/orderItem.js';
 
 export let cart = JSON.parse(localStorage.getItem('cart'));
 
@@ -94,7 +94,7 @@ export function updateDeliveryOption(productId, deliveryOptionId) {
         matchingItem.deliveryOptionId = deliveryOptionId;
         saveCart();
     }
-    orderItem();
+    renderOrderSummary();
 }
 
 

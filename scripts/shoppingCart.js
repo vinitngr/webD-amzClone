@@ -1,8 +1,9 @@
-import { updateCartQuantity, orderItem } from "./order section/orderItem.js";
+import { updateCartQuantity,renderOrderSummary } from "./order section/orderItem.js";
+import { renderPaymentSummary } from "./order section/payment.js";
 
 updateCartQuantity();
-orderItem();
-
+renderOrderSummary();
+renderPaymentSummary();
 
 // const today =dayjs();
 // const deliverydate= today.add(7,'days');
