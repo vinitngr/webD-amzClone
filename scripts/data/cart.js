@@ -22,6 +22,27 @@ if (!cart) {
     ];
 }
 
+
+
+// export let cart = JSON.parse(localStorage.getItem('cart')) || [
+//     {
+//         id: 'aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f',
+//         quantity: 2,
+//         deliveryOptionId: '2'
+//     },
+//     {
+//         id: 'e4363d8ce-6aa0-4b85-b27f-e1d07eb678c6',
+//         quantity: 1,
+//         deliveryOptionId: '3'
+//     },
+//     {
+//         id: "83d4ca15-0sf35-48f5-b7a3-1ea210004f2e",
+//         quantity: 5,
+//         deliveryOptionId: '1'
+//     }
+// ];
+
+
 export function addtocart(id, quantitySelected) {
     let matchingItem;
     cart.forEach((item) => {

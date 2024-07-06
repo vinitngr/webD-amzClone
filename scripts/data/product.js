@@ -9,247 +9,7 @@ export const products = [
             price: 599
         }
 
-        , { id: "e4363d8ce-6aa0-4b85-b27f-e1d07eb678c6",
-            imageUrl: './products/71NeU7k0eRL._AC_SY290_.jpg',
-            name: "Men's Marvel T-shirt",
-            rating: {
-                stars: 4,
-                counts: 456
-            },
-            price: 499
-        },
-        {   id: "15b6fc6f-327a-4ec4-8f96f-486349e85a3d",
-            imageUrl: './products/women-chiffon-beachwear-coverup-black.jpg',
-            name: "Women's Chiffon Beachwear Cover Up - Black",
-            rating: {
-                stars: 3.5,
-                counts: 235
-            },
-            price: 249
-        },
-        {   id: "83d4ca15-0sf35-48f5-b7a3-1ea210004f2e",
-            imageUrl: './products/watch.jpg',
-            name: "Smart Watch -bolt",
-            rating: {
-                stars: 3,
-                counts: 1289
-            },
-            price: 1299
-        },
-        {   id: "54e0eccd-8f36-46fd2b-b68a-8182611d9add",
-            imageUrl: './products/71eWZpgtFiL._AC_SY290_.jpg',
-            name: "casual t-shirt set of 3",
-            rating: {
-                stars: 4.5,
-                counts: 89
-            },
-            price: 699
-        },
-        {   id: "3ebe75dc-6sdf4d2-4137-8860-1f5a963e534b",
-            imageUrl: './products/61x1qmjozKL._AC_SY290_.jpg',
-            name: "Vitamin-c face serum - from billare",
-            rating: {
-                stars: 4,
-                counts: 333
-            },
-            price: 950
-        },
-        {   id: "8c9c52b5-5a19-4bcdfdsb-a5d1-158a74287c53",
-            imageUrl: './products/coffeemaker-with-glass-carafe-black.jpg',
-            name: "Coffeemaker with Glass Carafe and Reusable Filter",
-            rating: {
-                stars: 4.5,
-                counts: 1153
-            },
-            price: 2250
-        },
-        
-     
-      
-        {
-          id: "e43638ce-6aa0-4b85-b27f-e1d07eb678cc6",
-          imageUrl: "./products/athletic-cotton-socks-6-pairs.jpg",
-          name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
-          rating: {
-            stars: 4.5,
-            counts: 87
-          },
-          price: 1090,
-          keywords: [
-            "socks",
-            "sports",
-            "apparel"
-          ]
-        },
-        {
-          id: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
-          imageUrl: "./products/intermediate-composite-basketball.jpg",
-          name: "Intermediate Size Basketball",
-          rating: {
-            stars: 4,
-            counts: 127
-          },
-          price: 2095,
-          keywords: [
-            "sports",
-            "basketballs"
-          ]
-        },
-        {
-          id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
-          imageUrl: "./products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
-          name: "Adults Plain Cotton T-Shirt - 2 Pack",
-          rating: {
-            stars: 4.5,
-            counts: 56
-          },
-          price: 799,
-          keywords: [
-            "tshirts",
-            "apparel",
-            "mens"
-          ],
-          type: "clothing",
-          sizeChartLink: "images/clothing-size-chart.png"
-        },
-        {
-          id: "54e0eccd-8f36-462b-b68a-8182611d9add",
-          imageUrl: "./products/black-2-slot-toaster.jpg",
-          name: "2 Slot Toaster - Black",
-          rating: {
-            stars: 5,
-            counts: 2197
-          },
-          price: 1899,
-          keywords: [
-            "toaster",
-            "kitchen",
-            "appliances"
-          ]
-        },
-        {
-          id: "3ebe75dc-64d2-4137-8860-1f5a963e534b",
-          imageUrl: "./products/6-piece-white-dinner-plate-set.jpg",
-          name: "6 Piece White Dinner Plate Set",
-          rating: {
-            stars: 4,
-            counts: 37
-          },
-          price: 2067,
-          keywords: [
-            "plates",
-            "kitchen",
-            "dining"
-          ]
-        },
-        {
-          id: "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
-          imageUrl: "./products/6-piece-non-stick-baking-set.webp",
-          name: "6-Piece Nonstick, Carbon Steel Oven Bakeware Baking Set",
-          rating: {
-            stars: 4.5,
-            counts: 175
-          },
-          price: 3499,
-          keywords: [
-            "kitchen",
-            "cookware"
-          ]
-        },
-        {
-          id: "dd82ca78-a18b-4e2a-9250-31e67412f98d",
-          imageUrl: "./products/plain-hooded-fleece-sweatshirt-yellow.jpg",
-          name: "Plain Hooded Fleece Sweatshirt",
-          rating: {
-            stars: 4.5,
-            counts: 317
-          },
-          price: 2400,
-          keywords: [
-            "hoodies",
-            "sweaters",
-            "apparel"
-          ]
-        },
-        {
-          id: "77919bbe-0e56-475b-adde-4f24dfed3a04",
-          imageUrl: "./products/luxury-tower-set-6-piece.jpg",
-          name: "Luxury Towel Set - Graphite Gray",
-          rating: {
-            stars: 4.5,
-            counts: 144
-          },
-          price: 3599,
-          keywords: [
-            "bathroom",
-            "washroom",
-            "restroom",
-            "towels",
-            "bath towels"
-          ]
-        },
-        {
-          id: "3fdfe8d6-9a15-4979-b459-585b0d0545b9",
-          imageUrl: "./products/liquid-laundry-detergent-plain.jpg",
-          name: "Liquid Laundry Detergent, 110 Loads, 82.5 Fl Oz",
-          rating: {
-            stars: 4.5,
-            counts: 305
-          },
-          price: 2899,
-          keywords: [
-            "bathroom",
-            "cleaning"
-          ]
-        },
-        {
-          id: "58b4fc92-e98c-42aa-8c55-b6b79996769a",
-          imageUrl: "./products/knit-athletic-sneakers-gray.jpg",
-          name: "Waterproof Knit Athletic Sneakers - Gray",
-          rating: {
-            stars: 4,
-            counts: 89
-          },
-          price: 3390,
-          keywords: [
-            "shoes",
-            "running shoes",
-            "footwear"
-          ]
-        },
-        {
-          id: "5968897c-4d27-4872-89f6-5bcb052746d7",
-          imageUrl: "./products/women-chiffon-beachwear-coverup-black.jpg",
-          name: "Women's Chiffon Beachwear Cover Up - Black",
-          rating: {
-            stars: 4.5,
-            counts: 235
-          },
-          price: 2070,
-          keywords: [
-            "robe",
-            "swimsuit",
-            "swimming",
-            "bathing",
-            "apparel"
-          ],
-          type: "clothing",
-          sizeChartLink: "images/clothing-size-chart.png"
-        },
-        {
-          id: "aad29d11-ea98-41ee-9285-b916638cac4a",
-          imageUrl: "./products/round-sunglasses-black.jpg",
-          name: "Round Sunglasses",
-          rating: {
-            stars: 4.5,
-            counts: 30
-          },
-          price: 1560,
-          keywords: [
-            "accessories",
-            "shades"
-          ]
-        },
+        , 
         {
           id: "04701903-bc79-49c6-bc11-1af7e3651358",
           imageUrl: "./products/women-beach-sandals.jpg",
@@ -646,6 +406,248 @@ export const products = [
             "towels"
           ]
         },
+        { id: "e4363d8ce-6aa0-4b85-b27f-e1d07eb678c6",
+            imageUrl: './products/71NeU7k0eRL._AC_SY290_.jpg',
+            name: "Men's Marvel T-shirt",
+            rating: {
+                stars: 4,
+                counts: 456
+            },
+            price: 499
+        },
+        {   id: "15b6fc6f-327a-4ec4-8f96f-486349e85a3d",
+            imageUrl: './products/women-chiffon-beachwear-coverup-black.jpg',
+            name: "Women's Chiffon Beachwear Cover Up - Black",
+            rating: {
+                stars: 3.5,
+                counts: 235
+            },
+            price: 249
+        },
+        {   id: "83d4ca15-0sf35-48f5-b7a3-1ea210004f2e",
+            imageUrl: './products/watch.jpg',
+            name: "Smart Watch -bolt",
+            rating: {
+                stars: 3,
+                counts: 1289
+            },
+            price: 1299
+        },
+        {   id: "54e0eccd-8f36-46fd2b-b68a-8182611d9add",
+            imageUrl: './products/71eWZpgtFiL._AC_SY290_.jpg',
+            name: "casual t-shirt set of 3",
+            rating: {
+                stars: 4.5,
+                counts: 89
+            },
+            price: 699
+        },
+        {   id: "3ebe75dc-6sdf4d2-4137-8860-1f5a963e534b",
+            imageUrl: './products/61x1qmjozKL._AC_SY290_.jpg',
+            name: "Vitamin-c face serum - from billare",
+            rating: {
+                stars: 4,
+                counts: 333
+            },
+            price: 950
+        },
+        {   id: "8c9c52b5-5a19-4bcdfdsb-a5d1-158a74287c53",
+            imageUrl: './products/coffeemaker-with-glass-carafe-black.jpg',
+            name: "Coffeemaker with Glass Carafe and Reusable Filter",
+            rating: {
+                stars: 4.5,
+                counts: 1153
+            },
+            price: 2250
+        },
+        
+     
+      
+        {
+          id: "e43638ce-6aa0-4b85-b27f-e1d07eb678cc6",
+          imageUrl: "./products/athletic-cotton-socks-6-pairs.jpg",
+          name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
+          rating: {
+            stars: 4.5,
+            counts: 87
+          },
+          price: 1090,
+          keywords: [
+            "socks",
+            "sports",
+            "apparel"
+          ]
+        },
+        {
+          id: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
+          imageUrl: "./products/intermediate-composite-basketball.jpg",
+          name: "Intermediate Size Basketball",
+          rating: {
+            stars: 4,
+            counts: 127
+          },
+          price: 2095,
+          keywords: [
+            "sports",
+            "basketballs"
+          ]
+        },
+        {
+          id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
+          imageUrl: "./products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
+          name: "Adults Plain Cotton T-Shirt - 2 Pack",
+          rating: {
+            stars: 4.5,
+            counts: 56
+          },
+          price: 799,
+          keywords: [
+            "tshirts",
+            "apparel",
+            "mens"
+          ],
+          type: "clothing",
+          sizeChartLink: "images/clothing-size-chart.png"
+        },
+        {
+          id: "54e0eccd-8f36-462b-b68a-8182611d9add",
+          imageUrl: "./products/black-2-slot-toaster.jpg",
+          name: "2 Slot Toaster - Black",
+          rating: {
+            stars: 5,
+            counts: 2197
+          },
+          price: 1899,
+          keywords: [
+            "toaster",
+            "kitchen",
+            "appliances"
+          ]
+        },
+        {
+          id: "3ebe75dc-64d2-4137-8860-1f5a963e534b",
+          imageUrl: "./products/6-piece-white-dinner-plate-set.jpg",
+          name: "6 Piece White Dinner Plate Set",
+          rating: {
+            stars: 4,
+            counts: 37
+          },
+          price: 2067,
+          keywords: [
+            "plates",
+            "kitchen",
+            "dining"
+          ]
+        },
+        {
+          id: "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
+          imageUrl: "./products/6-piece-non-stick-baking-set.webp",
+          name: "6-Piece Nonstick, Carbon Steel Oven Bakeware Baking Set",
+          rating: {
+            stars: 4.5,
+            counts: 175
+          },
+          price: 3499,
+          keywords: [
+            "kitchen",
+            "cookware"
+          ]
+        },
+        {
+          id: "dd82ca78-a18b-4e2a-9250-31e67412f98d",
+          imageUrl: "./products/plain-hooded-fleece-sweatshirt-yellow.jpg",
+          name: "Plain Hooded Fleece Sweatshirt",
+          rating: {
+            stars: 4.5,
+            counts: 317
+          },
+          price: 2400,
+          keywords: [
+            "hoodies",
+            "sweaters",
+            "apparel"
+          ]
+        },
+        {
+          id: "77919bbe-0e56-475b-adde-4f24dfed3a04",
+          imageUrl: "./products/luxury-tower-set-6-piece.jpg",
+          name: "Luxury Towel Set - Graphite Gray",
+          rating: {
+            stars: 4.5,
+            counts: 144
+          },
+          price: 3599,
+          keywords: [
+            "bathroom",
+            "washroom",
+            "restroom",
+            "towels",
+            "bath towels"
+          ]
+        },
+        {
+          id: "3fdfe8d6-9a15-4979-b459-585b0d0545b9",
+          imageUrl: "./products/liquid-laundry-detergent-plain.jpg",
+          name: "Liquid Laundry Detergent, 110 Loads, 82.5 Fl Oz",
+          rating: {
+            stars: 4.5,
+            counts: 305
+          },
+          price: 2899,
+          keywords: [
+            "bathroom",
+            "cleaning"
+          ]
+        },
+        {
+          id: "58b4fc92-e98c-42aa-8c55-b6b79996769a",
+          imageUrl: "./products/knit-athletic-sneakers-gray.jpg",
+          name: "Waterproof Knit Athletic Sneakers - Gray",
+          rating: {
+            stars: 4,
+            counts: 89
+          },
+          price: 3390,
+          keywords: [
+            "shoes",
+            "running shoes",
+            "footwear"
+          ]
+        },
+        {
+          id: "5968897c-4d27-4872-89f6-5bcb052746d7",
+          imageUrl: "./products/women-chiffon-beachwear-coverup-black.jpg",
+          name: "Women's Chiffon Beachwear Cover Up - Black",
+          rating: {
+            stars: 4.5,
+            counts: 235
+          },
+          price: 2070,
+          keywords: [
+            "robe",
+            "swimsuit",
+            "swimming",
+            "bathing",
+            "apparel"
+          ],
+          type: "clothing",
+          sizeChartLink: "images/clothing-size-chart.png"
+        },
+        {
+          id: "aad29d11-ea98-41ee-9285-b916638cac4a",
+          imageUrl: "./products/round-sunglasses-black.jpg",
+          name: "Round Sunglasses",
+          rating: {
+            stars: 4.5,
+            counts: 30
+          },
+          price: 1560,
+          keywords: [
+            "accessories",
+            "shades"
+          ]
+        },
+       
         {
           id: "10ed8504-57db-433c-b0a3-fc71a35c88a1",
           imageUrl: "./products/knit-athletic-sneakers-pink.webp",

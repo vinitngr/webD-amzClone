@@ -20,11 +20,15 @@ body {
 .rightdiv {
     width: 400px;
     background-color: rgb(201, 201, 201);
-    height: 450px;
+    /* height: 450px; */
+    
  
-    text-align: right;
 }
-
+.div{
+    height: 100px;
+    background-color: red;
+    margin: 10px;
+}
 .container {
     flex: 1;
     border-radius: 10px;
@@ -34,6 +38,7 @@ main {
     display: flex;
     /* justify-content: space-between; */
     gap: 10px;
+    /* align-items: flex-start; */
 
 }
 
@@ -121,6 +126,7 @@ main {
     #image img {
         max-height: 100%;
         /* max-width: 70%; */
+        /* max-height: 70%; */
 
     }
  
