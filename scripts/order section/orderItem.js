@@ -14,12 +14,12 @@ export function renderOrderSummary() {
             <hr>
         </div>
     `;
-
     cart.forEach((cartItem) => {
         let matchingItem;
         products.forEach((product) => {
             if (cartItem.id === product.id) {
                 matchingItem = product;
+              
             }
         });
 

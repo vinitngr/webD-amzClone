@@ -1,3 +1,25 @@
+
+
+class Product{
+  id;
+  imageUrl;
+  name ;
+  rating;
+  price;
+
+  constructor(productdetails){
+      this.id = productdetails.id ;
+      this.imageUrl = productdetails.imageUrl ;
+      this.name = productdetails.name ;
+      this.rating = productdetails.rating ;
+      this.price = productdetails.price ;
+  }
+
+}
+
+
+
+
 export const products = [
         {   id: "aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f",
             imageUrl: './products/men-cozy-fleece-zip-up-hoodie-red.jpg',
@@ -696,9 +718,10 @@ export const products = [
           ]
         },
    
-      ];
+      ].map((productdetails)=>{
+        return new Product(productdetails);
+
+      });
 
 
-
-
-
+// console.log(products);

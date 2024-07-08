@@ -63,3 +63,4 @@ export default Cart;
 
 const cart = new Cart();
 console.log(cart);
+console.log(cart.saveCart);
