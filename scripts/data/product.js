@@ -14,9 +14,11 @@ class Product{
       this.rating = productdetails.rating ;
       this.price = productdetails.price ;
   }
-
+  
+  getStarUrl(){
+   return `./ratings/rating-${this.rating.stars * 10}.png`    //one of the benefit of making class, it makes code look clean and organized
+  }
 }
-
 
 
 
@@ -723,5 +725,9 @@ export const products = [
 
       });
 
-
 // console.log(products);
+//       const a= products.map((productdetails)=>{
+//         return new Product(productdetails);
+
+//       });
+//     console.log(a);

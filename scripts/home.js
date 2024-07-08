@@ -18,7 +18,7 @@ products.forEach((product) => {
             <div class="product-name line-limit">${product.name}</div>
             <div class="product-price">${product.price}₹</div>
             <div class="product-rating">
-                <div class="product-rating-stars"><img src="./ratings/rating-${product.rating.stars * 10}.png"></div>
+                <div class="product-rating-stars"><img src="${product.getStarUrl()}"></div>
                 <div class="product-rating-counts">${product.rating.counts}</div>
             </div>
 
