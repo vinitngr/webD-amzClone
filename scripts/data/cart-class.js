@@ -42,7 +42,7 @@ class Cart {
         console.log(this.items);
     }
 
-    removeItem(productId) {
+    #removeItem(productId) {            //now its private and cant used outside class (can't be call outside class)
         this.items = this.items.filter(item => item.id !== productId);
         this.saveCart();
     }
@@ -59,8 +59,11 @@ class Cart {
     }
 }
 
-export default Cart;
+// export default Cart;
 
-const cart = new Cart();
+export const cart = new Cart();
 console.log(cart);
 console.log(cart.saveCart);
+
+
+ 
