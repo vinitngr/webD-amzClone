@@ -1,5 +1,7 @@
 import { updateCartQuantity,renderOrderSummary } from "./order section/orderItem.js";
 import { renderPaymentSummary } from "./order section/payment.js";
+import './data/cart-oop.js' ;
+import '../scripts/data/cart-class.js'
 
 updateCartQuantity();
 renderOrderSummary();

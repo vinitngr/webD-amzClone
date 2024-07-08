@@ -3,6 +3,7 @@ import { renderOrderSummary } from '../order section/orderItem.js';
 export let cart = JSON.parse(localStorage.getItem('cart'));
 
 if (!cart) {
+    
     cart = [
         {
             id: 'aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f',
@@ -96,5 +97,3 @@ export function updateDeliveryOption(productId, deliveryOptionId) {
     }
     renderOrderSummary();
 }
-
-
