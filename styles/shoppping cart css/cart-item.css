@@ -63,15 +63,12 @@ main {
     }
     .container {
         width: 60%;
-        min-width: 360px;
+        min-width: 300px;
       
       
     }
 
-    .payment-summary {
-        width: 60%;
-        min-width: 360px;
-    }
+   
 
     .item {
         grid-template-columns: 70% 30%;

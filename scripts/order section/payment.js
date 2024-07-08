@@ -33,7 +33,7 @@ export function renderPaymentSummary() {
 
 
     const paymentSummaryHTML = `
-    
+             
             <div class="payment-summary-title">Payment Summary</div>
         
             <div class="payment-summary-row">
@@ -60,7 +60,7 @@ export function renderPaymentSummary() {
             <div class="placeOrder">
                 Place Your Order
             </div>
-
+      
     
     `;
 

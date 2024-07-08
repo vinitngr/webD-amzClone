@@ -3,7 +3,7 @@
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 30px;
-
+    box-sizing: border-box;
     
  
 }
@@ -51,4 +51,14 @@
     align-items: center;
     margin-top: 50px;
     border-radius: 10px;
+}
+
+@media(max-width:1220px) {
+
+    .payment-summary {
+        width: 60%;
+        
+        min-width: 300px;
+        
+    }
 }
