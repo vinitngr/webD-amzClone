@@ -18,9 +18,27 @@ class Product{
   getStarUrl(){
    return `./ratings/rating-${this.rating.stars * 10}.png`    //one of the benefit of making class, it makes code look clean and organized
   }
+
+  extraInfoHTML(){
+    return ''
+  }
 }
 
+class Clothing extends Product{
+  sizeChartLink;
 
+  constructor(productdetails){
+    super(productdetails)   //call parents constructor 
+    this.sizeChartLink= productdetails.sizeChartLink ;
+  }
+
+  extraInfoHTML(){
+    //super.extraInfoHTML() ; //to stop method overwritting // calls parents method
+    return `
+      <a href='${this.sizeChartLink}' target= "_main ">size chart</a>
+    `
+  }
+}
 
 export const products = [
         {   id: "aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f",
@@ -721,8 +739,10 @@ export const products = [
         },
    
       ].map((productdetails)=>{
+        if( productdetails.type== 'clothing'){
+          return new Clothing(productdetails);
+        }
         return new Product(productdetails);
-
       });
 
 // console.log(products);
@@ -731,3 +751,5 @@ export const products = [
 
 //       });
 //     console.log(a);
+
+// console.log(products)

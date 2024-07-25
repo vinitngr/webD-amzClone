@@ -40,9 +40,12 @@ products.forEach((product) => {
                 </select>
             </div>
         </div>
-    </div>`;
-
-
+        ${
+            product.extraInfoHTML()
+        }
+    </div>
+   
+`;
 });
 document.querySelector('.products-container').innerHTML = HTMLcontent;
 
