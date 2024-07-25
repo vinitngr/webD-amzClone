@@ -57,9 +57,9 @@ export function renderPaymentSummary() {
                 <div class="totalPrice">₹${total.toFixed(2)}</div>
             </div>
 
-            <div class="placeOrder">
+            <button class="placeOrder">
                 Place Your Order
-            </div>
+            </button>
       
     
     `;
@@ -76,6 +76,20 @@ export function renderPaymentSummary() {
         document.querySelector('.ItemNumber').innerHTML = `Item (${cartQuantity})` ;
     }
     
+    // document.querySelector('.placeOrder')
+    //     .addEventListener('click' ,async ()=>{
+    //         const response = await fetch('https://supersimplebackend.dev/orders' ,{
+    //             method : 'POST' ,
+    //             headers:{
+    //                 'Content-Type' : 'application/json'
+    //             },
+    //             body : JSON.stringify({
+    //                 cart : cart
+    //             })
+    //         })
+    //         const order= await response.json()
+    //         console.log(order)
+    //     })
 }
 
 

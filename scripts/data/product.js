@@ -35,7 +35,7 @@ class Clothing extends Product{
   extraInfoHTML(){
     //super.extraInfoHTML() ; //to stop method overwritting // calls parents method
     return `
-      <a href='${this.sizeChartLink}' target= "_main ">size chart</a>
+      <a href='https://www.shutterstock.com/shutterstock/photos/1947503983/display_1500/stock-vector-size-chart-for-women-measurements-for-clothing-women-s-eu-sizes-and-uk-sizes-chart-in-sm-1947503983.jpg' target= "_main ">size chart</a>
     `
   }
 }
