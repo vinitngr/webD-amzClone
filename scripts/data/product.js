@@ -745,11 +745,88 @@ export const products = [
         return new Product(productdetails);
       });
 
-// console.log(products);
-//       const a= products.map((productdetails)=>{
-//         return new Product(productdetails);
 
+
+
+export const fetchProducts = async () => {
+  try {
+      const response = await fetch('https://supersimplebackend.dev/products');
+      if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      const products = await response.json(); // Fetch and parse JSON data
+
+      // Map through fetched products and create instances of Clothing or Product
+      return products.map((productDetails) => {
+          if (productDetails.type === 'clothing') {
+              return new Clothing(productDetails);
+          }
+          return new Product(productDetails);
+      }); 
+
+  } catch (error) {
+      console.error('Error fetching product:', error);
+  }
+}
+
+// fetchproduct will return you promice and you have to use promise go get data
+// fetchProducts()     
+//     .then(products => console.log(products))
+//     .catch(error => console.error('Error:', error));
+
+ 
+// METHOD-2  for fatching and doing console with mapping
+// Define async function to fetch and map products
+// const fetchProducts = async () => {
+//     try {
+//         const response = await fetch('https://supersimplebackend.dev/products');
+//         const products = await response.json();
+
+//         // Map through fetched products and create instances of Clothing or Product
+//         return products.map((productDetails) => {
+//             if (productDetails.type === 'clothing') {
+//                 return new Clothing(productDetails);
+//             }
+//             return new Product(productDetails);
+//         });
+//     } catch (error) {
+//         console.error('Error fetching products:', error);
+//         return []; // Return an empty array in case of error
+//     }
+// };
+
+// // Call async function and handle result
+// const handleProducts = async () => {
+//     try {
+//         const products = await fetchProducts();
+//         console.log(products); // Logs the mapped array with class instances
+//     } catch (error) {
+//         console.error('Error handling products:', error);
+//     }
+// };
+
+// handleProducts();
+
+
+// const fetchProducts = async () => {
+//   try {
+//       const response = await fetch('https://supersimplebackend.dev/products');
+//       if (!response.ok) {
+//           throw new Error(`HTTP error! Status: ${response.status}`);
+//       }
+//       const products = await response.json(); // Fetch and parse JSON data
+
+//       // Map through fetched products and create instances of Clothing or Product
+//       return products.map((productDetails) => {
+//           if (productDetails.type === 'clothing') {
+//               return new Clothing(productDetails);
+//           }
+//           return new Product(productDetails);
 //       });
-//     console.log(a);
+//   } catch (error) {
+//       console.error('Error fetching product:', error);
+//       return []; // Return an empty array in case of error
+//   }
+// };
 
-// console.log(products)
+
