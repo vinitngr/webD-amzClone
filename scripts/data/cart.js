@@ -67,7 +67,7 @@ export function addtocart(id, quantitySelected) {
     console.log(cart);
 };
 
-function saveCart() {
+export function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 export function removeItem(productId) {

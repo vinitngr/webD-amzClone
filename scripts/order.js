@@ -169,7 +169,7 @@ containerHTML()
 
 function exportHTML(){
     let HTML=''
-    order.forEach(orderItem=>{
+    order.reverse().forEach(orderItem=>{
         HTML+= orderItem.html ;
        
     })

@@ -7,24 +7,24 @@ import { updateCartQuantity } from './orderItem.js';
 export function renderPaymentSummary() {
     let productsPrice = 0;
     let deliverysPrice=0 ;
-    cart.forEach((cartItem) => {
-        let matchingItem;
-        let deliveryOption;
-        products.forEach((product) => {
-            if (cartItem.id === product.id) {
-                matchingItem = product;
-            }
-        });
-        const deliveryOptionId = cartItem.deliveryOptionId;
-   
-        deliveryOptions.forEach((option) => {
-            if (option.deliveryId == deliveryOptionId) {
-                deliveryOption = option; }
-        });
-        productsPrice += matchingItem.price * cartItem.quantity;
-        deliverysPrice += deliveryOption.deliveryCost;
-
+  cart.forEach((cartItem) => {
+    let matchingItem;
+    let deliveryOption;
+    products.forEach((product) => {
+        if (cartItem.id === product.id) {
+            matchingItem = product;
+        }
     });
+    const deliveryOptionId = cartItem.deliveryOptionId;
+
+    deliveryOptions.forEach((option) => {
+        if (option.deliveryId == deliveryOptionId) {
+            deliveryOption = option; }
+    });
+    productsPrice += matchingItem.price * cartItem.quantity;
+    deliverysPrice += deliveryOption.deliveryCost;
+
+});
 
     const totalBeforeTax= productsPrice + deliverysPrice ;
     const tax= totalBeforeTax* 0.05 ;
@@ -57,9 +57,9 @@ export function renderPaymentSummary() {
                 <div class="totalPrice">₹${total.toFixed(0)}.00</div>
             </div>
 
-            <button class="placeOrder">
+            <a href="/orders.html"><button class="placeOrder">
                 Place Your Order
-            </button>
+            </button></a>
       
     
     `;
@@ -75,7 +75,12 @@ export function renderPaymentSummary() {
         });
         document.querySelector('.ItemNumber').innerHTML = `Item (${cartQuantity})` ;
     }
+
     
+    document.querySelector('.placeOrder').addEventListener('click', function() {
+        window.location.href = '/orders.html'; 
+    })
+
     // document.querySelector('.placeOrder')
     //     .addEventListener('click' ,async ()=>{
     //         const response = await fetch('https://supersimplebackend.dev/orders' ,{

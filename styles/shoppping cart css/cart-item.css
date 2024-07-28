@@ -15,12 +15,14 @@ body {
     padding-top: 10px;
     border-bottom: 2px solid rgb(227, 227, 227);
 
+
 }
 
 
 .container {
     flex: 1;
     border-radius: 10px;
+    min-height: 370px;
 }
 
 main {
