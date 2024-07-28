@@ -54,7 +54,7 @@ export function renderPaymentSummary() {
             </div>
             <div class="payment-summary-row total">
                 <div>Order total:</div>
-                <div class="totalPrice">₹${total.toFixed(2)}</div>
+                <div class="totalPrice">₹${total.toFixed(0)}.00</div>
             </div>
 
             <button class="placeOrder">
