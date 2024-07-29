@@ -1,35 +1,36 @@
 import { cart } from '../data/cart.js';
 import { products } from '../data/product.js';
 import { deliveryOptions } from '../data/delivery.js';
-import { updateCartQuantity } from './orderItem.js';
+
 
 
 export function renderPaymentSummary() {
     let productsPrice = 0;
-    let deliverysPrice=0 ;
-  cart.forEach((cartItem) => {
-    let matchingItem;
-    let deliveryOption;
-    products.forEach((product) => {
-        if (cartItem.id === product.id) {
-            matchingItem = product;
-        }
+    let deliverysPrice = 0;
+    cart.forEach((cartItem) => {
+        let matchingItem;
+        let deliveryOption;
+        products.forEach((product) => {
+            if (cartItem.id === product.id) {
+                matchingItem = product;
+            }
+        });
+        const deliveryOptionId = cartItem.deliveryOptionId;
+
+        deliveryOptions.forEach((option) => {
+            if (option.deliveryId == deliveryOptionId) {
+                deliveryOption = option;
+            }
+        });
+        productsPrice += matchingItem.price * cartItem.quantity;
+        deliverysPrice += deliveryOption.deliveryCost;
+
     });
-    const deliveryOptionId = cartItem.deliveryOptionId;
 
-    deliveryOptions.forEach((option) => {
-        if (option.deliveryId == deliveryOptionId) {
-            deliveryOption = option; }
-    });
-    productsPrice += matchingItem.price * cartItem.quantity;
-    deliverysPrice += deliveryOption.deliveryCost;
+    const totalBeforeTax = productsPrice + deliverysPrice;
+    const tax = totalBeforeTax * 0.05;
 
-});
-
-    const totalBeforeTax= productsPrice + deliverysPrice ;
-    const tax= totalBeforeTax* 0.05 ;
-
-    const total= tax + totalBeforeTax ;
+    const total = tax + totalBeforeTax;
 
 
     const paymentSummaryHTML = `
@@ -64,7 +65,7 @@ export function renderPaymentSummary() {
     
     `;
 
-    document.querySelector('.js-payment-summary').innerHTML= paymentSummaryHTML ;
+    document.querySelector('.js-payment-summary').innerHTML = paymentSummaryHTML;
 
 
     updateCartQuantity();
@@ -73,12 +74,12 @@ export function renderPaymentSummary() {
         cart.forEach((cartItem) => {
             cartQuantity += cartItem.quantity;
         });
-        document.querySelector('.ItemNumber').innerHTML = `Item (${cartQuantity})` ;
+        document.querySelector('.ItemNumber').innerHTML = `Item (${cartQuantity})`;
     }
 
-    
-    document.querySelector('.placeOrder').addEventListener('click', function() {
-        window.location.href = '/orders.html'; 
+
+    document.querySelector('.placeOrder').addEventListener('click', function () {
+        window.location.href = '/orders.html';
     })
 
     // document.querySelector('.placeOrder')

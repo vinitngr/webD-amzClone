@@ -30,8 +30,7 @@
   justify-content: space-between;
 
   padding: 20px 25px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+
 }
 
 .order-header-left-section {
@@ -50,6 +49,7 @@
 
 .order-header-right-section {
   flex-shrink: 1;
+
 }
 
 @media (max-width: 575px) {

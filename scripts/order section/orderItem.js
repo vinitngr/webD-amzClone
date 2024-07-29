@@ -14,12 +14,12 @@ export function renderOrderSummary() {
             <hr>
         </div>
     `;
+
     cart.forEach((cartItem) => {
         let matchingItem;
         products.forEach((product) => {
             if (cartItem.id === product.id) {
                 matchingItem = product;
-              
             }
         });
 
@@ -38,7 +38,7 @@ export function renderOrderSummary() {
         const today = dayjs();
         const deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
         const dateString = deliveryDate.format('dddd, MMMM D');
-      
+
         HTMLcontent += `
             <div class="item item-${matchingItem.id}">
                 <div id="image"><img src="${matchingItem.imageUrl}"></div>

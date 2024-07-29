@@ -739,6 +739,8 @@ export const products = [
         },
    
       ].map((productdetails)=>{
+        productdetails.price = Math.round(productdetails.price * 0.5);
+
         if( productdetails.type== 'clothing'){
           return new Clothing(productdetails);
         }
