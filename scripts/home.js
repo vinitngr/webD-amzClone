@@ -137,6 +137,5 @@ function added(addButton) {
     }, 1500);
 }
 
-
 updateCartQuantity();
 

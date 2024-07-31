@@ -1,4 +1,3 @@
-
 import { products } from "./data/product.js";
 import { cart, saveCart } from "./data/cart.js";
 import { deliveryOptions } from "./data/delivery.js";
@@ -6,25 +5,21 @@ import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
 
 const today = dayjs();
 const formattedDate = today.format('MMMM D');
-
 let order = JSON.parse(localStorage.getItem('order')) || [];
+
 function saveOrder() {
     localStorage.setItem('order', JSON.stringify(order));
 }
-
 function addtoOrder(htmlContent) {
     order.push({ html: htmlContent });
     saveOrder();
 }
-
 function generateRandomCode() {
     return `${randomHex(8)}-${randomHex(4)}-${randomHex(4)}-${randomHex(4)}-${randomHex(12)}`;
 }
-
 function randomHex(length) {
     return Math.random().toString(16).slice(2, 2 + length);
 }
-
 function calculatePrices() {
     let productsPrice = 0;
     let deliverysPrice = 0;
@@ -38,7 +33,6 @@ function calculatePrices() {
     const tax = totalBeforeTax * 0.05;
     return totalBeforeTax + tax;
 }
-
 function containerHTML() {
     let htmlContent = '';
     if (cart.length > 0) {
@@ -96,11 +90,9 @@ function containerHTML() {
     }
 
     addtoOrder(htmlContent);
-    cart.length = 0;
-    saveCart();
+    
     exportHTML();
 }
-
 function exportHTML() {
     let HTML = '';
     order.reverse().forEach(orderItem => {
@@ -108,16 +100,17 @@ function exportHTML() {
     });
     document.querySelector('.orders-grid').innerHTML = HTML;
 }
-
 function setupBuyAgainButtons() {
     document.querySelectorAll('.buy-again-button').forEach((addButton) => {
         addButton.addEventListener('click', () => {
             const id = addButton.dataset.itemId;
             addtocart(id);
+            added(addButton);
+            updateCartQuantity()
         });
+        
     });
 }
-
 function addtocart(id) {
     const matchingItem = cart.find(item => id === item.id);
     if (matchingItem) {
@@ -126,7 +119,26 @@ function addtocart(id) {
         cart.push({ id: id, quantity: 1, deliveryOptionId: '2' });
     }
     saveCart();
+    
+   
 }
+function added(addButton) {
+    addButton.innerHTML = " <img id='Added' src='./Icons/checkmark.png'>  Added"
+    setTimeout(() => {
+        addButton.innerHTML = `<img class="buy-again-icon" src="https://static.thenounproject.com/png/776827-200.png">
+                        <span class="buy-again-message">Buy it again</span> `
+    }, 1500);
+}
+function updateCartQuantity() {
+    let cartQuantity = 0;
+    cart.forEach((cartItem) => {
+        cartQuantity += cartItem.quantity;
 
+    });
+    document.querySelector('.cart-quantity').innerHTML = cartQuantity;
+    document.getElementById('list-cartquantity').innerHTML = cartQuantity;
+
+}
 containerHTML();
 setupBuyAgainButtons();
+updateCartQuantity();

@@ -41,146 +41,6 @@ class Clothing extends Product{
 }
 
 export const products = [
-        {   id: "aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f",
-            imageUrl: './products/men-cozy-fleece-zip-up-hoodie-red.jpg',
-            name: "Red-hoodie 100% Cotton Bath Towels - 2 Pack, Light Teal",
-            rating: {
-                stars: 4.5,
-                counts: 45
-            },
-            price: 599
-        }
-
-        , 
-        {
-          id: "04701903-bc79-49c6-bc11-1af7e3651358",
-          imageUrl: "./products/women-beach-sandals.jpg",
-          name: "Women's Two Strap Buckle Sandals - Tan",
-          rating: {
-            stars: 4.5,
-            counts: 562
-          },
-          price: 2499,
-          keywords: [
-            "footwear",
-            "sandals",
-            "womens",
-            "beach",
-            "summer"
-          ]
-        },
-        {
-          id: "901eb2ca-386d-432e-82f0-6fb1ee7bf969",
-          imageUrl: "./products/blackout-curtain-set-beige.webp",
-          name: "Blackout Curtains Set 4-Pack - Beige",
-          rating: {
-            stars: 4.5,
-            counts: 232
-          },
-          price: 4599,
-          keywords: [
-            "bedroom",
-            "curtains",
-            "home"
-          ]
-        },
-        {
-          id: "82bb68d7-ebc9-476a-989c-c78a40ee5cd9",
-          imageUrl: "./products/men-slim-fit-summer-shorts-gray.jpg",
-          name: "Men's Slim-Fit Summer Shorts",
-          rating: {
-            stars: 4,
-            counts: 160
-          },
-          price: 1699,
-          keywords: [
-            "shorts",
-            "apparel",
-            "mens"
-          ]
-        },
-        {
-          id: "c2a82c5e-aff4-435f-9975-517cfaba2ece",
-          imageUrl: "./products/electric-glass-and-steel-hot-water-kettle.webp",
-          name: "Electric Glass and Steel Hot Tea Water Kettle - 1.7-Liter",
-          rating: {
-            stars: 5,
-            counts: 846
-          },
-          price: 3074,
-          keywords: [
-            "water boiler",
-            "appliances",
-            "kitchen"
-          ]
-        },
-        {
-          id: "6b07d4e7-f540-454e-8a1e-363f25dbae7d",
-          imageUrl: "./products/facial-tissue-2-ply-18-boxes.jpg",
-          name: "Ultra Soft Tissue 2-Ply - 18 Box",
-          rating: {
-            stars: 4,
-            counts: 99
-          },
-          price: 2374,
-          keywords: [
-            "kleenex",
-            "tissues",
-            "kitchen",
-            "tissues box",
-            "napkins"
-          ]
-        },
-        {
-          id: "a82c6bac-3067-4e68-a5ba-d827ac0be010",
-          imageUrl: "./products/straw-sunhat.webp",
-          name: "Straw Lifeguard Sun Hat",
-          rating: {
-            stars: 4,
-            counts: 215
-          },
-          price: 2200,
-          keywords: [
-            "hats",
-            "straw hats",
-            "summer",
-            "apparel"
-          ]
-        },
-        {
-          id: "e4f64a65-1377-42bc-89a5-e572d19252e2",
-          imageUrl: "./products/sky-flower-stud-earrings.webp",
-          name: "Sterling Silver Sky Flower Stud Earrings",
-          rating: {
-            stars: 4.5,
-            counts: 52
-          },
-          price: 1799,
-          keywords: [
-            "jewelry",
-            "accessories",
-            "womens"
-          ]
-        },
-        {
-          id: "b0f17cc5-8b40-4ca5-9142-b61fe3d98c85",
-          imageUrl: "./products/women-stretch-popover-hoodie-black.jpg",
-          name: "Women's Stretch Popover Hoodie",
-          rating: {
-            stars: 4.5,
-            counts: 2465
-          },
-          price: 1374,
-          keywords: [
-            "hooded",
-            "hoodies",
-            "sweaters",
-            "womens",
-            "apparel"
-          ],
-          type: "clothing",
-          sizeChartLink: "images/clothing-size-chart.png"
-        },
         {
           id: "a93a101d-79ef-4cf3-a6cf-6dbe532a1b4a",
           imageUrl: "./products/bathroom-rug.jpg",
@@ -466,6 +326,146 @@ export const products = [
             },
             price: 249
         },
+        {   id: "aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f",
+          imageUrl: './products/men-cozy-fleece-zip-up-hoodie-red.jpg',
+          name: "Red-hoodie 100% Cotton Bath Towels - 2 Pack, Light Teal",
+          rating: {
+              stars: 4.5,
+              counts: 45
+          },
+          price: 599
+      }
+
+      , 
+      {
+        id: "04701903-bc79-49c6-bc11-1af7e3651358",
+        imageUrl: "./products/women-beach-sandals.jpg",
+        name: "Women's Two Strap Buckle Sandals - Tan",
+        rating: {
+          stars: 4.5,
+          counts: 562
+        },
+        price: 2499,
+        keywords: [
+          "footwear",
+          "sandals",
+          "womens",
+          "beach",
+          "summer"
+        ]
+      },
+      {
+        id: "901eb2ca-386d-432e-82f0-6fb1ee7bf969",
+        imageUrl: "./products/blackout-curtain-set-beige.webp",
+        name: "Blackout Curtains Set 4-Pack - Beige",
+        rating: {
+          stars: 4.5,
+          counts: 232
+        },
+        price: 4599,
+        keywords: [
+          "bedroom",
+          "curtains",
+          "home"
+        ]
+      },
+      {
+        id: "82bb68d7-ebc9-476a-989c-c78a40ee5cd9",
+        imageUrl: "./products/men-slim-fit-summer-shorts-gray.jpg",
+        name: "Men's Slim-Fit Summer Shorts",
+        rating: {
+          stars: 4,
+          counts: 160
+        },
+        price: 1699,
+        keywords: [
+          "shorts",
+          "apparel",
+          "mens"
+        ]
+      },
+      {
+        id: "c2a82c5e-aff4-435f-9975-517cfaba2ece",
+        imageUrl: "./products/electric-glass-and-steel-hot-water-kettle.webp",
+        name: "Electric Glass and Steel Hot Tea Water Kettle - 1.7-Liter",
+        rating: {
+          stars: 5,
+          counts: 846
+        },
+        price: 3074,
+        keywords: [
+          "water boiler",
+          "appliances",
+          "kitchen"
+        ]
+      },
+      {
+        id: "6b07d4e7-f540-454e-8a1e-363f25dbae7d",
+        imageUrl: "./products/facial-tissue-2-ply-18-boxes.jpg",
+        name: "Ultra Soft Tissue 2-Ply - 18 Box",
+        rating: {
+          stars: 4,
+          counts: 99
+        },
+        price: 2374,
+        keywords: [
+          "kleenex",
+          "tissues",
+          "kitchen",
+          "tissues box",
+          "napkins"
+        ]
+      },
+      {
+        id: "a82c6bac-3067-4e68-a5ba-d827ac0be010",
+        imageUrl: "./products/straw-sunhat.webp",
+        name: "Straw Lifeguard Sun Hat",
+        rating: {
+          stars: 4,
+          counts: 215
+        },
+        price: 2200,
+        keywords: [
+          "hats",
+          "straw hats",
+          "summer",
+          "apparel"
+        ]
+      },
+      {
+        id: "e4f64a65-1377-42bc-89a5-e572d19252e2",
+        imageUrl: "./products/sky-flower-stud-earrings.webp",
+        name: "Sterling Silver Sky Flower Stud Earrings",
+        rating: {
+          stars: 4.5,
+          counts: 52
+        },
+        price: 1799,
+        keywords: [
+          "jewelry",
+          "accessories",
+          "womens"
+        ]
+      },
+      {
+        id: "b0f17cc5-8b40-4ca5-9142-b61fe3d98c85",
+        imageUrl: "./products/women-stretch-popover-hoodie-black.jpg",
+        name: "Women's Stretch Popover Hoodie",
+        rating: {
+          stars: 4.5,
+          counts: 2465
+        },
+        price: 1374,
+        keywords: [
+          "hooded",
+          "hoodies",
+          "sweaters",
+          "womens",
+          "apparel"
+        ],
+        type: "clothing",
+        sizeChartLink: "images/clothing-size-chart.png"
+      },
         {   id: "83d4ca15-0sf35-48f5-b7a3-1ea210004f2e",
             imageUrl: './products/watch.jpg',
             name: "Smart Watch -bolt",
