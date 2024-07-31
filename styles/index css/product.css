@@ -3,12 +3,12 @@
 .products-container {
  
     margin-top: 70px;
-    padding: 40px 20px;
+    padding: 10px 10px;
     padding-bottom: 300px;
     background-color: #C3C3C3;
     display: flex;
     justify-content: space-evenly;
-    gap: 15px; 
+    gap: 5px; 
     flex-wrap: wrap;
     /* align-content: flex-start; */
 }
@@ -122,7 +122,7 @@ Proportional Shrinkage: The flex-shrink: 1 allows the item to shrink when needed
 
     width: 100vw;
     height: 400px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     border-radius: 15px;
     background-image: url(/products/MayART24_GW_PC_Hero_D1_2x._CB559775927_.jpg);
     background-size: cover;
