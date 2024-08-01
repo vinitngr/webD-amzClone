@@ -137,8 +137,6 @@ function updateCartQuantity() {
 
     });
     document.querySelector('.cart-quantity').innerHTML = cartQuantity;
-    
-
 }
 exportHTML()
 
