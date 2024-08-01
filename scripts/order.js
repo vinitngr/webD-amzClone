@@ -90,7 +90,8 @@ function containerHTML() {
     }
 
     addtoOrder(htmlContent);
-    
+    cart.length = 0;
+        saveCart();
     exportHTML();
 }
 function exportHTML() {
@@ -136,9 +137,19 @@ function updateCartQuantity() {
 
     });
     document.querySelector('.cart-quantity').innerHTML = cartQuantity;
-    document.getElementById('list-cartquantity').innerHTML = cartQuantity;
+    
 
 }
-containerHTML();
-setupBuyAgainButtons();
+exportHTML()
+
 updateCartQuantity();
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Check if the flag is set in local storage
+    if (localStorage.getItem('placeOrder') === 'true') {
+        containerHTML();
+        setupBuyAgainButtons();
+        // Remove the flag after using it
+        localStorage.removeItem('placeOrder');
+    }
+});

@@ -78,10 +78,9 @@ export function renderPaymentSummary() {
 
 
     document.querySelector('.placeOrder').addEventListener('click', function () {
-        cart.length = 0;
-        saveCart();
+        localStorage.setItem('placeOrder', 'true');
         window.location.href = '/orders.html';
     })
-
+ 
 }
 
