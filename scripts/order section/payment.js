@@ -79,7 +79,7 @@ export function renderPaymentSummary() {
 
     document.querySelector('.placeOrder').addEventListener('click', function () {
         localStorage.setItem('placeOrder', 'true');
-        // window.location.href = '../../orders.html';
+        window.location.href = '../../orders.html';
         
     })
  
