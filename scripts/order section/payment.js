@@ -57,7 +57,7 @@ export function renderPaymentSummary() {
                 <div class="totalPrice">₹${total.toFixed(0)}.00</div>
             </div>
 
-            <a href="/orders.html"><button class="placeOrder">
+            <a href="../../orders.html"><button class="placeOrder">
                 Place Your Order
             </button></a>
       
@@ -79,7 +79,8 @@ export function renderPaymentSummary() {
 
     document.querySelector('.placeOrder').addEventListener('click', function () {
         localStorage.setItem('placeOrder', 'true');
-        window.location.href = '../../orders.html';
+        // window.location.href = '../../orders.html';
+        
     })
  
 }
