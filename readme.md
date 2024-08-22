@@ -4,6 +4,10 @@
 
 This project is a responsive clone of the Amazon frontend, allowing users to interact with a product catalog. Features include adding, updating, and deleting products, as well as placing orders. The design is fully responsive, ensuring a seamless user experience across various screen sizes.
 
+## Landing Page
+
+![Landing Page](./images/readmeImage.png)  <!-- Replace with your image path -->
+
 ## Features
 
 - **Product Management**:
