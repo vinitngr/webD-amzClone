@@ -124,7 +124,7 @@ Proportional Shrinkage: The flex-shrink: 1 allows the item to shrink when needed
     height: 400px;
     margin-bottom: 15px;
     border-radius: 15px;
-    background-image: url(/products/MayART24_GW_PC_Hero_D1_2x._CB559775927_.jpg);
+    background-image: url(../../products/banner.jpg);
     background-size: cover;
     background-position:top;
   
