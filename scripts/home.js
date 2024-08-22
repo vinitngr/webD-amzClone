@@ -1,6 +1,8 @@
 import { addtocart, cart } from "./data/cart.js";
 import { products , fetchProducts } from "./data/product.js";
 import svgs from "./data/svgs.js";
+products.sort(() => Math.random() - 0.5); //can be used in filter stuffs
+
 
 //cant use fetch data as my data's are slightly different
 // fetchProducts() 
@@ -138,4 +140,7 @@ function added(addButton) {
 }
 
 updateCartQuantity();
+
+
+
 
