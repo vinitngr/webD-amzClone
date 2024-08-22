@@ -112,6 +112,7 @@ function setupBuyAgainButtons() {
         
     });
 }
+
 function addtocart(id) {
     const matchingItem = cart.find(item => id === item.id);
     if (matchingItem) {
