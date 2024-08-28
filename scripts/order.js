@@ -138,6 +138,7 @@ function updateCartQuantity() {
 }
 exportHTML()
 updateCartQuantity();
+setupBuyAgainButtons();
 
 document.addEventListener('DOMContentLoaded', () => {
     // Check if the flag is set in local storage
