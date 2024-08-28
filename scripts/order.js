@@ -11,7 +11,7 @@ function saveOrder() {
     localStorage.setItem('order', JSON.stringify(order));
 }
 function addtoOrder(htmlContent) {
-    order.push({ html: htmlContent });
+    order.unshift({ html: htmlContent }); // Add new orders to the beginning of the array //unshift instead of push
     saveOrder();
 }
 function generateRandomCode() {
@@ -96,13 +96,11 @@ function containerHTML() {
 }
 function exportHTML() {
     let HTML = '';
-    order.reverse().forEach(orderItem => {
+    order.forEach(orderItem => {
         HTML += orderItem.html;
     });
-    
     document.querySelector('.orders-grid').innerHTML = HTML;
 }
-
 function setupBuyAgainButtons() {
     document.querySelectorAll('.buy-again-button').forEach((addButton) => {
         addButton.addEventListener('click', () => {
@@ -122,8 +120,6 @@ function addtocart(id) {
         cart.push({ id: id, quantity: 1, deliveryOptionId: '2' });
     }
     saveCart();
-    
-   
 }
 function added(addButton) {
     addButton.innerHTML = " <img id='Added' src='./Icons/checkmark.png'>  Added"
