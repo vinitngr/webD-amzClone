@@ -91,16 +91,18 @@ function containerHTML() {
 
     addtoOrder(htmlContent);
     cart.length = 0;
-        saveCart();
+    saveCart();
     exportHTML();
 }
 function exportHTML() {
     let HTML = '';
-    order.reverse().forEach(orderItem => {
+    order.forEach(orderItem => {
         HTML += orderItem.html;
     });
+    
     document.querySelector('.orders-grid').innerHTML = HTML;
 }
+
 function setupBuyAgainButtons() {
     document.querySelectorAll('.buy-again-button').forEach((addButton) => {
         addButton.addEventListener('click', () => {
@@ -112,7 +114,6 @@ function setupBuyAgainButtons() {
         
     });
 }
-
 function addtocart(id) {
     const matchingItem = cart.find(item => id === item.id);
     if (matchingItem) {
@@ -140,7 +141,6 @@ function updateCartQuantity() {
     document.querySelector('.cart-quantity').innerHTML = cartQuantity;
 }
 exportHTML()
-
 updateCartQuantity();
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -148,7 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('placeOrder') === 'true') {
         containerHTML();
         setupBuyAgainButtons();
-        // Remove the flag after using it
         localStorage.removeItem('placeOrder');
     }
 });
