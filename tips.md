@@ -1,4 +1,4 @@
-// forEach(() => {}) // Iterate over each element
+l// forEach(() => {}) // Iterate over each element
 // map(() => {}) // Transform elements into a new array
 // filter(() => {}) // Create a new array with elements that pass the test
 // reduce((acc, val) => {}, initialValue) // Accumulate values into a single result
