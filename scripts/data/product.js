@@ -1,18 +1,19 @@
 
 
-class Product{
+export class Product{
   id;
   imageUrl;
   name ;
   rating;
   price;
-
+  keywords;
   constructor(productdetails){
       this.id = productdetails.id ;
       this.imageUrl = productdetails.imageUrl ;
       this.name = productdetails.name ;
       this.rating = productdetails.rating ;
       this.price = productdetails.price ;
+      this.keywords = productdetails.keywords ;
   }
   
   getStarUrl(){
@@ -24,7 +25,7 @@ class Product{
   }
 }
 
-class Clothing extends Product{
+export class Clothing extends Product{
   sizeChartLink;
 
   constructor(productdetails){
@@ -315,7 +316,11 @@ export const products = [
                 stars: 4,
                 counts: 456
             },
-            price: 499
+            price: 499,
+            keywords: [
+                "clothing",
+                "mens"
+            ]
         },
         {   id: "15b6fc6f-327a-4ec4-8f96f-486349e85a3d",
             imageUrl: './products/women-chiffon-beachwear-coverup-black.jpg',
@@ -324,7 +329,12 @@ export const products = [
                 stars: 3.5,
                 counts: 235
             },
-            price: 249
+            price: 249,
+            keywords: [
+                "clothing",
+                "womens",
+                "beachwear"
+            ]
         },
         {   id: "aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f",
           imageUrl: './products/men-cozy-fleece-zip-up-hoodie-red.jpg',
@@ -333,7 +343,12 @@ export const products = [
               stars: 4.5,
               counts: 45
           },
-          price: 599
+          price: 599,
+          keywords: [
+            "clothing",
+            "mens",
+            "hoodie"
+          ]
       }
 
       , 
@@ -461,6 +476,8 @@ export const products = [
           "hoodies",
           "sweaters",
           "womens",
+          "apparel",
+          "clothing",
           "apparel"
         ],
         type: "clothing",
@@ -473,7 +490,12 @@ export const products = [
                 stars: 3,
                 counts: 1289
             },
-            price: 1299
+            price: 1299,
+            keywords: [
+              "watches",
+              "electronics",
+              "accessories"
+            ]
         },
         {   id: "54e0eccd-8f36-46fd2b-b68a-8182611d9add",
             imageUrl: './products/71eWZpgtFiL._AC_SY290_.jpg',
@@ -482,7 +504,12 @@ export const products = [
                 stars: 4.5,
                 counts: 89
             },
-            price: 699
+            price: 699,
+            keywords: [
+              "casual",
+              "t-shirts",
+              "clothing"
+            ]
         },
         {   id: "3ebe75dc-6sdf4d2-4137-8860-1f5a963e534b",
             imageUrl: './products/61x1qmjozKL._AC_SY290_.jpg',
@@ -491,7 +518,12 @@ export const products = [
                 stars: 4,
                 counts: 333
             },
-            price: 950
+            price: 950,
+            keywords: [
+              "beauty",
+              "skincare",
+              "serums"
+            ]
         },
         {   id: "8c9c52b5-5a19-4bcdfdsb-a5d1-158a74287c53",
             imageUrl: './products/coffeemaker-with-glass-carafe-black.jpg',
@@ -500,7 +532,12 @@ export const products = [
                 stars: 4.5,
                 counts: 1153
             },
-            price: 2250
+            price: 2250,
+            keywords: [
+              "coffee",
+              "appliances",
+              "kitchen"
+            ]
         },
         
      
@@ -739,7 +776,7 @@ export const products = [
         },
    
       ].map((productdetails)=>{
-        productdetails.price = Math.round(productdetails.price * 0.5);
+        productdetails.price = Math.round(productdetails.price * 0.3);
 
         if( productdetails.type== 'clothing'){
           return new Clothing(productdetails);
@@ -752,13 +789,7 @@ export const products = [
 
 export const fetchProducts = async () => {
   try {
-      const response = await fetch('https://supersimplebackend.dev/products');
-      if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      const products = await response.json(); // Fetch and parse JSON data
 
-      // Map through fetched products and create instances of Clothing or Product
       return products.map((productDetails) => {
           if (productDetails.type === 'clothing') {
               return new Clothing(productDetails);
@@ -808,27 +839,4 @@ export const fetchProducts = async () => {
 // };
 
 // handleProducts();
-
-
-// const fetchProducts = async () => {
-//   try {
-//       const response = await fetch('https://supersimplebackend.dev/products');
-//       if (!response.ok) {
-//           throw new Error(`HTTP error! Status: ${response.status}`);
-//       }
-//       const products = await response.json(); // Fetch and parse JSON data
-
-//       // Map through fetched products and create instances of Clothing or Product
-//       return products.map((productDetails) => {
-//           if (productDetails.type === 'clothing') {
-//               return new Clothing(productDetails);
-//           }
-//           return new Product(productDetails);
-//       });
-//   } catch (error) {
-//       console.error('Error fetching product:', error);
-//       return []; // Return an empty array in case of error
-//   }
-// };
-
 
