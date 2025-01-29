@@ -33,4 +33,4 @@ This project is a responsive clone of the Amazon frontend, allowing users to int
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/yourusername/amazon-responsive-frontend-clone.git
+   git clone https://github.com/vinitngr/webD-amzClone.git
